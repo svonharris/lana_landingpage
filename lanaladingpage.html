@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <title>The Honeymoon Tour</title>
+<meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="css/all.css">
-<script type="text/javascript" src="scripts/function.js"></script>
 </head>
 <body>
 
@@ -11,56 +11,54 @@
 	<div class="coverimage"></div>
 	<div class="content">
 		<div class="header">
-			<h2 class="header-artist">lana del rey</h2>
-			<h1 class="header-title">the honeymoon <span class="allcaps">us</span> tour</h1>
+			<h1 class="header-artist">lana del rey</h1>
+			<h2 class="header-title">the honeymoon <span class="allcaps">us</span> tour</h2>
 			<div class="header-content">
-				<p class="header-content-subtext">featuring special guest</p>
-				<p class="header-content-featureartist">
-					<span class="featureartist-title">tw<span class="thintext">o</span></span>
-					<span class="featureartist-title">d<span class="thintext">oo</span>r</span>
-					<br>
-					<span class="featureartist-title"><span class="thintext">c</span>inema</span>
-					<span class="featureartist-title"><span class="thintext">c</span>lub</span>
-				</p>
+				<p class="header-content-subtext">featuring special guest TWO DOOR CINEMA CLUB</p>
 			</div>
+			<p class="header-subtext">
+				September 3rd through January 25th. <a href="/tour-dates.com" class="link">Click here for all cities and dates</a>.
+			</p>
+			<p>Get notified when pre-sale tickets go on sale!</p>
 		</div>
 	</div>
 	<div class="landingform">
-		<div class="landingform-header">
-			<h3>Get notified when pre-sale tickets go on sale!</h3>
-		</div>
 		<div class="landingform-content">
 			<form action="#" method="post">
 				<ul class="formfields">
 					<li class="formfields-item">
-						<label for="firstname" class="formfields-item-label">First Name</label>
+						<label for="firstname" class="formfields-item-label">First Name<span class="darkred">*</span></label>
 						<span class="formfields-item-input">
 							<input type="text" id="firstname"  required="required" />
 						</span>
 					</li>
 					<li class="formfields-item">
-						<label for="lastname" class="formfields-item-label">Last Name</label>
+						<label for="lastname" class="formfields-item-label">Last Name<span class="darkred">*</span></label>
 						<span class="formfields-item-input">
 							<input type="text" id="lastname"  required="required" />
 						</span>
 					</li>
 					<li class="formfields-item">
-						<label for="email" class="formfields-item-label">Email</label>
+						<label for="email" class="formfields-item-label">Email Address<span class="darkred">*</span></label>
 						<span class="formfields-item-input">
 							<input type="email" id="email"  required="required" />
 						</span>
 					</li>
 					<li class="formfields-item">
-						<label for="song" class="formfields-item-label">Favorite Lana song?</label>
+						<label for="phone" class="formfields-item-label">Phone Number</label>
 						<span class="formfields-item-input">
-							<input type="text" id="song" />
+							<input type="number" id="phone" placeholder="optional" />
 						</span>
 					</li>
 				</ul>
+				<p class="formfineprint">*Required fields</p>
 				<div class="formsubmit">
-					<button type="submit" class="button--submit">Submit</button>
+					<button type="submit" class="button--submit">Join The Honeymoon</button>
 				</div>
 			</form>
+		</div>
+		<div class="landingform-footer">
+			<p>By signing up you will automatically enrolled into a contest to win an all expenses paid trip to Las Vegas to meet Lana Del Rey backstage.</p>
 		</div>
 	</div>
 </div>
@@ -68,4 +66,5 @@
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/function.js"></script>
 </html>

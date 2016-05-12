@@ -5,6 +5,7 @@
 	font-weight: lighter;
 }
 .darkred {color: $dark-red;}
+.bold {font-weight: 700;}
 
 .container {
 	display: none;
@@ -12,9 +13,6 @@
 	max-width: 1200px;
     position: relative;
 	margin: 0 auto;
-	@include bp(mobile) {
-		//height: 1100px;
-	}
 }
 
 .coverimage {
@@ -105,7 +103,7 @@
     margin: 0 20px;
     position: relative;
     z-index: 1;
-    top: -132px;
+    top: -170px;
     @include bp(mobile) {
     	position: static;
     	margin-top: 50px;
@@ -124,21 +122,27 @@
 	        overflow: hidden;
 		}
 			.formfields-item {
-			    width: 23.5%;
-			    display: inline-block;
+			    width: 25%;
+			    float: left;
 			    padding-right: 15px;
 			    margin-bottom: 10px;
-			    @include bp(tablet) {
-			    	width: 22.9%;
-			    }
+			    @include box-sizing(border-box);
+				&:first-child .formfields-item-input.focused {
+				    margin-left: 2px;
+				}
+				&:last-child {
+				    padding-right: 0;
+				    .formfields-item-input.focused {
+					    margin-right: 2px;
+					}
+				}
+
 			    @include bp(mobile) {
 			    	width: 100%;
 		    	    padding-right: 0;
-			    } 
+			    }
 			}
-				.formfields-item:last-child {
-				    padding-right: 0;
-				}
+
 				.formfields-item-label {
 				    display: block;
 			        font-weight: 700;
@@ -154,16 +158,26 @@
     				text-align: left;
 					background-color: $dark-red;
 				    padding: 8px 7px;
-				}
-					.formfields-item-input input {
+
+				    &.focused {
+				    	outline: 2px inset $blue;
+			    	}
+				    &.invalid {
+				    	border: 2px inset red;
+				    	background-color: #fff;
+			    	}
+
+				    input {
 					    width: 100%;
 						background-color: transparent;
 						color: #fff;
 					}
+				}
 			.formfineprint {
 				font-size: 1em;
 				color: $dark-red;
 				text-align: left;
+				text-indent: 4px;
 			}
 			.formsubmit {
 			    min-height: 70px;
@@ -177,7 +191,7 @@
 					display: block;
 					text-decoration: none;
 					@include border-radius(5px);
-					background: #0B5CBF;
+					background: $blue;
 					text-align: center;
 					padding: 20px 30px;
 				    @include box-shadow(0px 9px 0px $honeymoon-blue);

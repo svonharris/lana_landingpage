@@ -12,11 +12,12 @@ $(document).ready(function() {
     }
 
     function highlight() {
-	    $('input').focus(function(){
-	    	if ($(this).is(':focus')) {
-	    		$('.formfields-item-input').css('border', '2px solid black');
-		    } else {
-		    	$('.formfields-item-input').css('border', '0');
-		    }
-	    });
+		$('.landingform-content').delegate('input', 'focus blur', function(){
+	    	var elem = $(this);
+			elem.closest('.formfields-item-input').toggleClass('focused');
+		});
 	}
+
+		
+
+

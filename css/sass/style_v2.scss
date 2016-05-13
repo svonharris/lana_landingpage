@@ -113,7 +113,6 @@
 				    float: left;
 				    padding-right: 15px;
 				    margin-bottom: 10px;
-				    @include box-sizing(border-box);
 					&:first-child .formfields-item-input.focused {
 					    margin-left: 2px;
 					}

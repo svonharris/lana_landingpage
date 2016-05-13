@@ -4,6 +4,9 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
+@import url(https://fonts.googleapis.com/css?family=Italianno);
+@import url(https://fonts.googleapis.com/css?family=Stalemate);
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
 /* line 9, sass/normalize.scss */
 html {
   font-family: sans-serif;
@@ -435,59 +438,74 @@ th {
 
 /* line 1, sass/base.scss */
 body {
-  font-size: 1.125em;
+  font-size: 1em;
   font-family: 'helvetica', arial;
-  background-color: #e4edfe;
+  color: #000000;
+  background-color: #f2e6d6;
   padding: 0;
   margin: 0;
 }
 
-/* line 8, sass/base.scss */
+/* line 9, sass/base.scss */
 p {
+  font-size: 1.125em;
   line-height: 22px;
   margin: 2px 0;
 }
 
-/* line 12, sass/base.scss */
+/* line 14, sass/base.scss */
 h1 {
-  font-size: 8em;
+  font-size: 6.375em;
+  line-height: 1;
+  margin: .1em 0;
 }
 
-/* line 15, sass/base.scss */
+/* line 20, sass/base.scss */
 h2 {
-  font-size: 5em;
-}
-
-/* line 18, sass/base.scss */
-h3 {
-  font-size: 1.625em;
-}
-
-/* line 21, sass/base.scss */
-::-webkit-input-placeholder {
-  color: #e1dede;
+  font-size: 5.062em;
+  line-height: 1;
+  margin: .1em 0;
 }
 
 /* line 25, sass/base.scss */
+h3 {
+  font-size: 1.625em;
+  line-height: 1;
+  margin: .1em 0;
+}
+
+/* line 30, sass/base.scss */
+img {
+  max-width: 100%;
+  border: none;
+  vertical-align: middle;
+}
+
+/* line 35, sass/base.scss */
+::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+/* line 39, sass/base.scss */
 :-moz-placeholder {
-  color: #e1dede;
+  color: #ffffff;
 }
 
-/* line 29, sass/base.scss */
+/* line 43, sass/base.scss */
 ::-moz-placeholder {
-  color: #e1dede;
+  color: #ffffff;
 }
 
-/* line 33, sass/base.scss */
+/* line 47, sass/base.scss */
 :-ms-input-placeholder {
-  color: #e1dede;
+  color: #ffffff;
 }
 
-/* line 36, sass/base.scss */
+/* line 50, sass/base.scss */
 input {
   border: 0;
 }
-/* line 38, sass/base.scss */
+/* line 52, sass/base.scss */
 input:focus {
   border: 0;
   outline: 0;
@@ -498,164 +516,138 @@ input:focus {
   src: url("fonts/UpperEastSide-webfont.eot");
   src: url("fonts/UpperEastSide-webfont.eot?iefix") format("eot"), url("fonts/UpperEastSide-webfont.woff") format("woff"), url("fonts/UpperEastSide-webfont.ttf") format("truetype"), url("fonts/UpperEastSide-webfont.svg#webfont") format("svg");
 }
-/* line 1, sass/style.scss */
-.allcaps, .header-artist, .featureartist-title, .formfields-item-label {
+/* line 1, sass/style_v2.scss */
+.allcaps, .lanacontent-header-subtitle {
   text-transform: uppercase;
 }
 
-/* line 4, sass/style.scss */
+/* line 4, sass/style_v2.scss */
 .thintext {
   font-weight: lighter;
 }
 
-/* line 7, sass/style.scss */
+/* line 7, sass/style_v2.scss */
 .darkred {
   color: #a10713;
 }
 
-/* line 8, sass/style.scss */
+/* line 8, sass/style_v2.scss */
 .bold {
   font-weight: 700;
 }
 
-/* line 10, sass/style.scss */
+/* line 11, sass/style_v2.scss */
+.bckgrdpattern {
+  background-image: url("../images/background_pattern.jpg");
+  background-color: #f2e6d6;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+/* line 26, sass/style_v2.scss */
+.bckgrdlana {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 54%;
+}
+
+/* line 34, sass/style_v2.scss */
 .container {
   display: none;
   min-width: 320px;
   max-width: 1200px;
-  position: relative;
   margin: 0 auto;
-}
-
-/* line 21, sass/style.scss */
-.coverimage {
-  width: 56%;
-  height: 660px;
-  background-image: url("../images/lana.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-@media only screen and (max-width: 767px) {
-  /* line 21, sass/style.scss */
-  .coverimage {
-    width: 100%;
-    height: 500px;
-    float: none;
-    background-position: center top;
-    margin-left: auto;
-    margin-top: -38px;
-    margin-right: auto;
-    position: relative;
-    z-index: -1;
-  }
-}
-
-/* line 41, sass/style.scss */
-.content {
-  width: 64%;
-  position: absolute;
-  top: 75px;
-  right: 0;
-}
-@media only screen and (max-width: 767px) {
-  /* line 41, sass/style.scss */
-  .content {
-    position: static;
-    margin: -250px 15px 0;
-    right: 0;
-  }
-}
-
-/* line 53, sass/style.scss */
-.header-artist {
-  font-size: 2em;
-  font-weight: normal;
-  color: #a10713;
-  font-weight: 900;
-  line-height: 28px;
-  -webkit-transform: scale(1, 3);
-  -moz-transform: scale(1, 3);
-  -ms-transform: scale(1, 3);
-  -o-transform: scale(1, 3);
-  transform: scale(1, 3);
-  margin-bottom: 20px;
-}
-@media only screen and (max-width: 767px) {
-  /* line 53, sass/style.scss */
-  .header-artist {
-    font-size: 1.5em;
-    margin: 0;
-    line-height: 21px;
-  }
-}
-
-/* line 72, sass/style.scss */
-.header-title {
-  font-size: 4.5em;
-  font-weight: 400;
-  color: #022A5B;
-  font-family: UpperEastSide-webfont;
-  line-height: 75px;
-  margin-top: 45px;
-  margin-bottom: 0;
-  text-transform: capitalize;
-}
-@media only screen and (max-width: 767px) {
-  /* line 72, sass/style.scss */
-  .header-title {
-    font-size: 2.1em;
-    line-height: 33px;
-    margin-top: 35px;
-  }
-}
-
-/* line 88, sass/style.scss */
-.header-content-subtext {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 3px;
-}
-
-/* line 93, sass/style.scss */
-.header-content-featureartist {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0;
-}
-
-/* line 98, sass/style.scss */
-.featureartist-title {
-  font-weight: 700;
-}
-
-/* line 104, sass/style.scss */
-.landingform {
-  clear: both;
-  margin: 0 20px;
   position: relative;
-  z-index: 1;
-  top: -170px;
-}
-@media only screen and (max-width: 767px) {
-  /* line 104, sass/style.scss */
-  .landingform {
-    position: static;
-    margin-top: 50px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
 }
 
-/* line 120, sass/style.scss */
-.formfields {
-  font-size: 13px;
-  list-style: none;
-  padding: 0;
+/* line 43, sass/style_v2.scss */
+.lanacontent {
+  max-width: 70%;
+  width: 100%;
+  float: right;
+}
+
+/* line 48, sass/style_v2.scss */
+.lanacontent-header {
+  margin-bottom: 34px;
+}
+
+/* line 51, sass/style_v2.scss */
+.lanacontent-header-title {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #0c6cce;
+}
+
+/* line 59, sass/style_v2.scss */
+.lanacontent-header-subtitle {
+  line-height: 1;
+  -webkit-transform: scale(1, 2);
+  -moz-transform: scale(1, 2);
+  -ms-transform: scale(1, 2);
+  -o-transform: scale(1, 2);
+  transform: scale(1, 2);
   margin: 0;
+  height: 84px;
+  overflow: hidden;
+  margin-bottom: 53px;
+}
+
+/* line 73, sass/style_v2.scss */
+.lanacontent p {
+  display: inline-block;
+  line-height: 1;
+  margin: 0;
+  vertical-align: top;
+}
+
+/* line 80, sass/style_v2.scss */
+.twodoorlogo {
+  display: inline-block;
+  width: 327px;
+}
+
+/* line 86, sass/style_v2.scss */
+.lanaform {
+  clear: right;
+}
+
+/* line 89, sass/style_v2.scss */
+.lanaform-header {
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  line-height: 1;
+  padding: 26px 0 37px;
+  margin-bottom: -16px;
+}
+/* line 96, sass/style_v2.scss */
+.lanaform-header p {
+  font-size: 1.9375em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* line 104, sass/style_v2.scss */
+.formfields {
+  list-style: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0 20px;
+  margin-bottom: 0;
   overflow: hidden;
 }
 
-/* line 127, sass/style.scss */
+/* line 111, sass/style_v2.scss */
 .formfields-item {
   width: 25%;
   float: left;
@@ -665,83 +657,82 @@ input:focus {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 133, sass/style.scss */
+/* line 117, sass/style_v2.scss */
 .formfields-item:first-child .formfields-item-input.focused {
   margin-left: 2px;
 }
-/* line 136, sass/style.scss */
+/* line 120, sass/style_v2.scss */
 .formfields-item:last-child {
   padding-right: 0;
 }
-/* line 138, sass/style.scss */
+/* line 122, sass/style_v2.scss */
 .formfields-item:last-child .formfields-item-input.focused {
   margin-right: 2px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 127, sass/style.scss */
+  /* line 111, sass/style_v2.scss */
   .formfields-item {
     width: 100%;
     padding-right: 0;
   }
 }
 
-/* line 149, sass/style.scss */
+/* line 133, sass/style_v2.scss */
 .formfields-item-label {
   display: block;
   font-weight: 700;
-  margin-bottom: 5px;
-  text-align: center;
-}
-@media only screen and (max-width: 767px) {
-  /* line 149, sass/style.scss */
-  .formfields-item-label {
-    text-align: left;
-  }
+  line-height: 1;
+  margin-bottom: 11px;
 }
 
-/* line 159, sass/style.scss */
+/* line 139, sass/style_v2.scss */
 .formfields-item-input {
   display: block;
   text-align: left;
-  background-color: #a10713;
-  padding: 8px 7px;
+  background-color: #f28f1b;
+  padding: 10px 7px;
 }
-/* line 165, sass/style.scss */
+/* line 145, sass/style_v2.scss */
 .formfields-item-input.focused {
-  outline: 2px inset #0B5CBF;
+  outline: 2px inset #0c6cce;
 }
-/* line 168, sass/style.scss */
+/* line 148, sass/style_v2.scss */
 .formfields-item-input.invalid {
   border: 2px inset red;
   background-color: #fff;
 }
-/* line 173, sass/style.scss */
+/* line 153, sass/style_v2.scss */
 .formfields-item-input input {
   width: 100%;
   background-color: transparent;
   color: #fff;
 }
 
-/* line 179, sass/style.scss */
+/* line 160, sass/style_v2.scss */
 .formfineprint {
   font-size: 1em;
   color: #a10713;
   text-align: left;
   text-indent: 4px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0 20px 5px;
+  margin: 0;
 }
 
-/* line 185, sass/style.scss */
+/* line 170, sass/style_v2.scss */
 .formsubmit {
   min-height: 70px;
+  margin-top: 26px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 185, sass/style.scss */
+  /* line 170, sass/style_v2.scss */
   .formsubmit {
     min-height: 50px;
   }
 }
 
-/* line 191, sass/style.scss */
+/* line 177, sass/style_v2.scss */
 .button--submit {
   color: #fff;
   font-weight: 700;
@@ -752,36 +743,31 @@ input:focus {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  background: #0B5CBF;
+  background: #0c6cce;
   text-align: center;
-  padding: 20px 30px;
-  -webkit-box-shadow: 0px 9px 0px #022A5B;
-  -moz-box-shadow: 0px 9px 0px #022A5B;
-  box-shadow: 0px 9px 0px #022A5B;
+  padding: 16px 30px;
+  -webkit-box-shadow: 0px 9px 0px #061c5b;
+  -moz-box-shadow: 0px 9px 0px #061c5b;
+  box-shadow: 0px 9px 0px #061c5b;
   border: 0;
   margin: 0 auto;
 }
-/* line 204, sass/style.scss */
+/* line 190, sass/style_v2.scss */
 .button--submit:active {
-  -webkit-box-shadow: 0px 5px 0px #022A5B;
-  -moz-box-shadow: 0px 5px 0px #022A5B;
-  box-shadow: 0px 5px 0px #022A5B;
+  -webkit-box-shadow: 0px 5px 0px #061c5b;
+  -moz-box-shadow: 0px 5px 0px #061c5b;
+  box-shadow: 0px 5px 0px #061c5b;
   position: relative;
   top: 4px;
 }
-/* line 209, sass/style.scss */
+/* line 195, sass/style_v2.scss */
 .button--submit:focus {
   outline: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 191, sass/style.scss */
+  /* line 177, sass/style_v2.scss */
   .button--submit {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-}
-
-/* line 219, sass/style.scss */
-.landingform-footer {
-  margin-bottom: 45px;
 }

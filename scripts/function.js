@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    $('.container').fadeIn(1500);
+    fade();
     highlight();
-	submit(); 
+    submit(); 
 });
     
     function submit() {
@@ -19,5 +19,9 @@ $(document).ready(function() {
 	}
 
 		
-
+  function fade() {
+    $('.js-container').fadeIn(1000, function() {
+      $('.js-bckgrdlana').fadeIn(1000);
+    });
+  }
 

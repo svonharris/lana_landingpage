@@ -1,22 +1,36 @@
 body {
-	font-size: 1.125em; //18px
+	font-size: 1em; //16px
 	font-family: 'helvetica', arial;
-	background-color: #e4edfe;
+	color: $black;
+	background-color: $tan;
     padding: 0;
     margin: 0;
 } 
 p {
+	font-size: 1.125em;
     line-height: 22px;
     margin: 2px 0;
 }
 h1 {
-	font-size: 8em; //128px
+	//font-size: 9.375em; //150px
+	font-size: 6.375em; //102px
+	line-height: 1;
+	margin: .1em 0;
 }
 h2 {
-	font-size: 5em; //80px
+	font-size: 5.062em; //81px
+	line-height: 1;
+	margin: .1em 0;
 }
 h3 {
 	font-size: 1.625em; //26px
+	line-height: 1;
+	margin: .1em 0;
+}
+img {
+    max-width: 100%;
+    border: none;
+    vertical-align: middle;
 }
 ::-webkit-input-placeholder {
    color: $placeholder-text;
@@ -48,3 +62,6 @@ input {
 	     url('fonts/UpperEastSide-webfont.ttf') format('truetype'),
 	     url('fonts/UpperEastSide-webfont.svg#webfont') format('svg');
 }
+@import url(https://fonts.googleapis.com/css?family=Italianno);
+@import url(https://fonts.googleapis.com/css?family=Stalemate);
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes);

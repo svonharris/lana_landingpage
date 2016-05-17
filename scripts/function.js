@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     fade();
     highlight();
@@ -5,11 +6,7 @@ $(document).ready(function() {
 });
     
     function submit() {
-      // $('.button--submit').click(function(){
-      //   alert("Thanks");
-      //   $(this).html("Good Luck!");
-      // });
-      $('form').submit(function(e) {
+      $('.button--submit').click(function(e){
         e.preventDefault();
         alert("Thanks");
         $('.button--submit').html("Good Luck!");
@@ -17,15 +14,21 @@ $(document).ready(function() {
     }
 
     function highlight() {
-  		// $('.landingform-content').delegate('input', 'focus blur', function(){
-  	 //    	var elem = $(this);
-  		// 	elem.closest('.formfields-item-input').toggleClass('focused');
-  		// });
       $(':input').focus(function() {
-        $(this).addClass('focused').blur(function() {
-          $(this).removeClass('focused');
+        var field = $(this);
+        field.parent().addClass('focused');
+        field.blur(function() {
+          field.parent().removeClass('focused');
         });
+
+        // $(':button').focus(function() {
+        //   var bttn = $(':button');
+        //   field.parent().css('outline', '0');
+        //   bttn.addClass('focused');
+        // });
       });
+
+      
 	}
 
 		

@@ -1,11 +1,8 @@
-.allcaps {
-	text-transform: uppercase;
-}
-.thintext  {
-	font-weight: lighter;
-}
+.allcaps {text-transform: uppercase;}
+.thintext  {font-weight: lighter;}
 .darkred {color: $dark-red;}
 .bold {font-weight: 700;}
+.focused {outline: 2px inset $blue-bright;}
 
 
 .bckgrdpattern {
@@ -37,6 +34,11 @@
 	max-width: 1200px;
 	margin: 0 auto;
     position: relative;
+    @include bp(mobile) {
+        padding-top: 15px;
+	    padding-left: 15px;
+	    padding-right: 15px;
+    }
 }
 
 	
@@ -44,6 +46,9 @@
 	    max-width: 70%;
 	    width: 100%;
 	    float: right;
+		@include bp(mobile) {
+			max-width: 100%;
+		}
 	}
 		.lanacontent-header {
 			margin-bottom: 34px;
@@ -54,9 +59,13 @@
 			    font-weight: 400;
 			    text-transform: capitalize;
 			    color: $blue-bright;
+			    @include bp(mobile) {
+			    	font-size: 2.23em;
+   					text-align: center;
+			    }
 			}
 
-			.lanacontent-header-subtitle {
+			/*.lanacontent-header-subtitle {
 			    line-height: 1;
 			    -webkit-transform: scale(1, 2);
 			    -moz-transform: scale(1, 2);
@@ -68,23 +77,41 @@
 			    overflow: hidden;
 			    margin-bottom: 53px;
 				@extend .allcaps;
+			}*/
+
+			.lanalogo {
+				@include bp(mobile) {
+    				width: 254px;
+				    margin: 0 auto 15px;
+				}
 			}
 
-			.lanacontent p {
+			.lanacontent-header-text {
 			    display: inline-block;
 		        line-height: 1;
     			margin: 0;
 			    vertical-align: top;
+			    @include bp(mobile) {
+				    display: block;
+			        text-align: center;
+				    margin-bottom: 10px;
+			    }
 			}
 
 			.twodoorlogo {
     			display: inline-block;
 			    width: 327px;
+			    @include bp(mobile) {
+    				display: block;
+			    	width: 137px;
+    				margin: 0 auto;
+			    }
 			}
 
 
 	.lanaform {
 	    clear: right;
+		@include bp(mobile) {margin-bottom: 50px;}
 	}
 		.lanaform-header {
 			background-color: rgba(255, 255, 255, 0.6);
@@ -92,13 +119,19 @@
 	        line-height: 1;
 		    padding: 26px 0 37px;
 		    margin-bottom: -16px;
+		    @include bp(mobile) {
+		    	padding: 20px 0 23px;
+		    }
+		}
 
-		    p {
+		    .lanaform-header-text {
 		        font-size: 1.9375em;
 		    	font-weight: bold;
 	    	    margin: 0;
+	    	    @include bp(mobile) { 
+	    	    	font-size: 1.125em;
+	    	    }
 		    }
-		}
 
 		.lanaform-content {}
 			.formfields {
@@ -113,14 +146,8 @@
 				    float: left;
 				    padding-right: 15px;
 				    margin-bottom: 10px;
-					&:first-child .formfields-item-input.focused {
-					    margin-left: 2px;
-					}
 					&:last-child {
 					    padding-right: 0;
-					    .formfields-item-input.focused {
-						    margin-right: 2px;
-						}
 					}
 
 				    @include bp(mobile) {
@@ -134,6 +161,9 @@
 				        font-weight: 700;
 				        line-height: 1;
 				        margin-bottom: 11px;
+				        @include bp(mobile) {
+				        	font-size: 0.875em;
+				        }
 					}
 					.formfields-item-input  {
 	    				display: block;
@@ -165,10 +195,15 @@
 			    background-color: rgba(255, 255, 255, 0.6);
 		        padding: 0 20px 5px;
 	            margin: 0;
+		        @include bp(mobile) {
+		        	font-size: 0.875em;
+		        }
 			}
 			.formsubmit {
-			    min-height: 70px;
-		        margin-top: 26px;
+		        min-height: 60px;
+			    max-width: 223px;
+			    margin: 26px auto;
+			    margin-top: 26px;
 			    @include bp(mobile) {
 		    	    min-height: 50px;
 			    }

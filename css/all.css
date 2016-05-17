@@ -1,82 +1,851 @@
-/*
-Error: Undefined mixin 'box-sizing'.
-        on line 10 of C:/Users/sheonna.harris/Desktop/javascript_projects/lana_landingpage/css/sass/base.scss, in `box-sizing'
-        from line 10 of C:/Users/sheonna.harris/Desktop/javascript_projects/lana_landingpage/css/sass/base.scss
-        from line 3 of C:/Users/sheonna.harris/Desktop/javascript_projects/lana_landingpage/css/sass/all.scss
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+@import url(https://fonts.googleapis.com/css?family=Italianno);
+@import url(https://fonts.googleapis.com/css?family=Stalemate);
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+/* line 9, sass/normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
 
-5: //@import "style";
-6: @import "style_v2";
+/**
+ * Remove default margin.
+ */
+/* line 19, sass/normalize.scss */
+body {
+  margin: 0;
+}
 
-Backtrace:
-C:/Users/sheonna.harris/Desktop/javascript_projects/lana_landingpage/css/sass/base.scss:10:in `box-sizing'
-C:/Users/sheonna.harris/Desktop/javascript_projects/lana_landingpage/css/sass/base.scss:10
-C:/Users/sheonna.harris/Desktop/javascript_projects/lana_landingpage/css/sass/all.scss:3
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:349:in `block in visit_mixin'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:98:in `block in with_mixin'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:98:in `with_mixin'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:347:in `visit_mixin'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:431:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:326:in `block (2 levels) in visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:326:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/root_node.rb:20:in `render'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:278:in `render'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:328:in `block in watch'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:252:in `call'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'box-sizing'.\A         on line 10 of C:/Users/sheonna.harris/Desktop/javascript_projects/lana_landingpage/css/sass/base.scss, in `box-sizing'\A         from line 10 of C:/Users/sheonna.harris/Desktop/javascript_projects/lana_landingpage/css/sass/base.scss\A         from line 3 of C:/Users/sheonna.harris/Desktop/javascript_projects/lana_landingpage/css/sass/all.scss\A \A 5: //@import \"style\";\A 6: @import \"style_v2\";"; }
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 33, sass/normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 54, sass/normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 67, sass/normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+/* line 77, sass/normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 89, sass/normalize.scss */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+/* line 98, sass/normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 110, sass/normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 118, sass/normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 127, sass/normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 136, sass/normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 145, sass/normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 154, sass/normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 162, sass/normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 170, sass/normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 174, sass/normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 185, sass/normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 193, sass/normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 204, sass/normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 212, sass/normalize.scss */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 221, sass/normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 229, sass/normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 252, sass/normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 266, sass/normalize.scss */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 277, sass/normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 290, sass/normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 302, sass/normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 311, sass/normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 322, sass/normalize.scss */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 334, sass/normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 346, sass/normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+/* line 356, sass/normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 367, sass/normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 376, sass/normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 387, sass/normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 396, sass/normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 405, sass/normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 416, sass/normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 421, sass/normalize.scss */
+td,
+th {
+  padding: 0;
+}
+
+/* line 1, sass/base.scss */
+body {
+  font-size: 1em;
+  font-family: 'helvetica', arial;
+  color: #000000;
+  background-color: #f2e6d6;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 9, sass/base.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 12, sass/base.scss */
+p {
+  font-size: 1.125em;
+  line-height: 22px;
+  margin: 2px 0;
+}
+
+/* line 17, sass/base.scss */
+h1 {
+  font-size: 6.375em;
+  line-height: 1;
+  margin: .1em 0;
+}
+
+/* line 23, sass/base.scss */
+h2 {
+  font-size: 5.062em;
+  line-height: 1;
+  margin: .1em 0;
+}
+
+/* line 28, sass/base.scss */
+h3 {
+  font-size: 1.625em;
+  line-height: 1;
+  margin: .1em 0;
+}
+
+/* line 33, sass/base.scss */
+img {
+  max-width: 100%;
+  border: none;
+  vertical-align: middle;
+}
+
+/* line 38, sass/base.scss */
+::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+/* line 42, sass/base.scss */
+:-moz-placeholder {
+  color: #ffffff;
+}
+
+/* line 46, sass/base.scss */
+::-moz-placeholder {
+  color: #ffffff;
+}
+
+/* line 50, sass/base.scss */
+:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+/* line 53, sass/base.scss */
+input {
+  border: 0;
+}
+/* line 55, sass/base.scss */
+input:focus {
+  border: 0;
+  outline: 0;
+}
+
+@font-face {
+  font-family: 'UpperEastSide-webfont';
+  src: url("fonts/UpperEastSide-webfont.eot");
+  src: url("fonts/UpperEastSide-webfont.eot?iefix") format("eot"), url("fonts/UpperEastSide-webfont.woff") format("woff"), url("fonts/UpperEastSide-webfont.ttf") format("truetype"), url("fonts/UpperEastSide-webfont.svg#webfont") format("svg");
+}
+/* line 1, sass/style_v2.scss */
+.allcaps {
+  text-transform: uppercase;
+}
+
+/* line 2, sass/style_v2.scss */
+.thintext {
+  font-weight: lighter;
+}
+
+/* line 3, sass/style_v2.scss */
+.darkred {
+  color: #a10713;
+}
+
+/* line 4, sass/style_v2.scss */
+.bold {
+  font-weight: 700;
+}
+
+/* line 5, sass/style_v2.scss */
+.focused {
+  outline: 2px inset #0c6cce;
+}
+
+/* line 8, sass/style_v2.scss */
+.bckgrdpattern {
+  background-image: url("../images/background_pattern.jpg");
+  background-color: #f2e6d6;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+/* line 23, sass/style_v2.scss */
+.bckgrdlana {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 54%;
+}
+
+/* line 31, sass/style_v2.scss */
+.container {
+  display: none;
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  /* line 31, sass/style_v2.scss */
+  .container {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* line 45, sass/style_v2.scss */
+.lanacontent {
+  max-width: 70%;
+  width: 100%;
+  float: right;
+}
+@media only screen and (max-width: 767px) {
+  /* line 45, sass/style_v2.scss */
+  .lanacontent {
+    max-width: 100%;
+  }
+}
+
+/* line 53, sass/style_v2.scss */
+.lanacontent-header {
+  margin-bottom: 34px;
+}
+
+/* line 56, sass/style_v2.scss */
+.lanacontent-header-title {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #0c6cce;
+}
+@media only screen and (max-width: 767px) {
+  /* line 56, sass/style_v2.scss */
+  .lanacontent-header-title {
+    font-size: 2.23em;
+    text-align: center;
+  }
+}
+
+/*.lanacontent-header-subtitle {
+    line-height: 1;
+    -webkit-transform: scale(1, 2);
+    -moz-transform: scale(1, 2);
+    -ms-transform: scale(1, 2);
+    -o-transform: scale(1, 2);
+    transform: scale(1, 2);
+    margin: 0;
+    height: 84px;
+    overflow: hidden;
+    margin-bottom: 53px;
+	@extend .allcaps;
+}*/
+@media only screen and (max-width: 767px) {
+  /* line 82, sass/style_v2.scss */
+  .lanalogo {
+    width: 254px;
+    margin: 0 auto 15px;
+  }
+}
+
+/* line 89, sass/style_v2.scss */
+.lanacontent-header-text {
+  display: inline-block;
+  line-height: 1;
+  margin: 0;
+  vertical-align: top;
+}
+@media only screen and (max-width: 767px) {
+  /* line 89, sass/style_v2.scss */
+  .lanacontent-header-text {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+/* line 101, sass/style_v2.scss */
+.twodoorlogo {
+  display: inline-block;
+  width: 327px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 101, sass/style_v2.scss */
+  .twodoorlogo {
+    display: block;
+    width: 137px;
+    margin: 0 auto;
+  }
+}
+
+/* line 112, sass/style_v2.scss */
+.lanaform {
+  clear: right;
+}
+@media only screen and (max-width: 767px) {
+  /* line 112, sass/style_v2.scss */
+  .lanaform {
+    margin-bottom: 50px;
+  }
+}
+
+/* line 116, sass/style_v2.scss */
+.lanaform-header {
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  line-height: 1;
+  padding: 26px 0 37px;
+  margin-bottom: -16px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 116, sass/style_v2.scss */
+  .lanaform-header {
+    padding: 20px 0 23px;
+  }
+}
+
+/* line 127, sass/style_v2.scss */
+.lanaform-header-text {
+  font-size: 1.9375em;
+  font-weight: bold;
+  margin: 0;
+}
+@media only screen and (max-width: 767px) {
+  /* line 127, sass/style_v2.scss */
+  .lanaform-header-text {
+    font-size: 1.125em;
+  }
+}
+
+/* line 137, sass/style_v2.scss */
+.formfields {
+  list-style: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0 20px;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+/* line 144, sass/style_v2.scss */
+.formfields-item {
+  width: 25%;
+  float: left;
+  padding-right: 15px;
+  margin-bottom: 10px;
+}
+/* line 149, sass/style_v2.scss */
+.formfields-item:last-child {
+  padding-right: 0;
+}
+@media only screen and (max-width: 767px) {
+  /* line 144, sass/style_v2.scss */
+  .formfields-item {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+/* line 159, sass/style_v2.scss */
+.formfields-item-label {
+  display: block;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 11px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 159, sass/style_v2.scss */
+  .formfields-item-label {
+    font-size: 0.875em;
+  }
+}
+
+/* line 168, sass/style_v2.scss */
+.formfields-item-input {
+  display: block;
+  text-align: left;
+  background-color: #f28f1b;
+  padding: 10px 7px;
+}
+/* line 174, sass/style_v2.scss */
+.formfields-item-input.focused {
+  outline: 2px inset #0c6cce;
+}
+/* line 177, sass/style_v2.scss */
+.formfields-item-input.invalid {
+  border: 2px inset red;
+  background-color: #fff;
+}
+/* line 182, sass/style_v2.scss */
+.formfields-item-input input {
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+}
+
+/* line 189, sass/style_v2.scss */
+.formfineprint {
+  font-size: 1em;
+  color: #a10713;
+  text-align: left;
+  text-indent: 4px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0 20px 5px;
+  margin: 0;
+}
+@media only screen and (max-width: 767px) {
+  /* line 189, sass/style_v2.scss */
+  .formfineprint {
+    font-size: 0.875em;
+  }
+}
+
+/* line 202, sass/style_v2.scss */
+.formsubmit {
+  min-height: 60px;
+  max-width: 223px;
+  margin: 26px auto;
+  margin-top: 26px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 202, sass/style_v2.scss */
+  .formsubmit {
+    min-height: 50px;
+  }
+}
+
+/* line 211, sass/style_v2.scss */
+.button--submit {
+  color: #fff;
+  font-weight: 700;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background: #0c6cce;
+  text-align: center;
+  padding: 16px 30px;
+  -webkit-box-shadow: 0px 9px 0px #061c5b;
+  -moz-box-shadow: 0px 9px 0px #061c5b;
+  box-shadow: 0px 9px 0px #061c5b;
+  border: 0;
+  margin: 0 auto;
+}
+/* line 224, sass/style_v2.scss */
+.button--submit:active {
+  -webkit-box-shadow: 0px 5px 0px #061c5b;
+  -moz-box-shadow: 0px 5px 0px #061c5b;
+  box-shadow: 0px 5px 0px #061c5b;
+  position: relative;
+  top: 4px;
+}
+/* line 229, sass/style_v2.scss */
+.button--submit:focus {
+  outline: 0;
+}
+@media only screen and (max-width: 767px) {
+  /* line 211, sass/style_v2.scss */
+  .button--submit {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

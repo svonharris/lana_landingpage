@@ -548,7 +548,12 @@ input:focus {
   outline: 2px inset #0c6cce;
 }
 
-/* line 8, sass/style_v2.scss */
+/* line 6, sass/style_v2.scss */
+.error {
+  outline: 2px solid red;
+}
+
+/* line 9, sass/style_v2.scss */
 .bckgrdpattern {
   background-image: url("../images/background_pattern.jpg");
   background-color: #f2e6d6;
@@ -564,7 +569,7 @@ input:focus {
   z-index: 0;
 }
 
-/* line 23, sass/style_v2.scss */
+/* line 24, sass/style_v2.scss */
 .bckgrdlana {
   display: none;
   position: fixed;
@@ -573,7 +578,7 @@ input:focus {
   width: 54%;
 }
 
-/* line 31, sass/style_v2.scss */
+/* line 32, sass/style_v2.scss */
 .container {
   display: none;
   min-width: 320px;
@@ -582,7 +587,7 @@ input:focus {
   position: relative;
 }
 @media only screen and (max-width: 767px) {
-  /* line 31, sass/style_v2.scss */
+  /* line 32, sass/style_v2.scss */
   .container {
     padding-top: 15px;
     padding-left: 15px;
@@ -590,25 +595,25 @@ input:focus {
   }
 }
 
-/* line 45, sass/style_v2.scss */
+/* line 46, sass/style_v2.scss */
 .lanacontent {
   max-width: 70%;
   width: 100%;
   float: right;
 }
 @media only screen and (max-width: 767px) {
-  /* line 45, sass/style_v2.scss */
+  /* line 46, sass/style_v2.scss */
   .lanacontent {
     max-width: 100%;
   }
 }
 
-/* line 53, sass/style_v2.scss */
+/* line 54, sass/style_v2.scss */
 .lanacontent-header {
   margin-bottom: 34px;
 }
 
-/* line 56, sass/style_v2.scss */
+/* line 57, sass/style_v2.scss */
 .lanacontent-header-title {
   font-family: 'Great Vibes', cursive;
   font-weight: 400;
@@ -616,7 +621,7 @@ input:focus {
   color: #0c6cce;
 }
 @media only screen and (max-width: 767px) {
-  /* line 56, sass/style_v2.scss */
+  /* line 57, sass/style_v2.scss */
   .lanacontent-header-title {
     font-size: 2.23em;
     text-align: center;
@@ -637,14 +642,14 @@ input:focus {
 	@extend .allcaps;
 }*/
 @media only screen and (max-width: 767px) {
-  /* line 82, sass/style_v2.scss */
+  /* line 83, sass/style_v2.scss */
   .lanalogo {
     width: 254px;
     margin: 0 auto 15px;
   }
 }
 
-/* line 89, sass/style_v2.scss */
+/* line 90, sass/style_v2.scss */
 .lanacontent-header-text {
   display: inline-block;
   line-height: 1;
@@ -652,7 +657,7 @@ input:focus {
   vertical-align: top;
 }
 @media only screen and (max-width: 767px) {
-  /* line 89, sass/style_v2.scss */
+  /* line 90, sass/style_v2.scss */
   .lanacontent-header-text {
     display: block;
     text-align: center;
@@ -660,13 +665,13 @@ input:focus {
   }
 }
 
-/* line 101, sass/style_v2.scss */
+/* line 102, sass/style_v2.scss */
 .twodoorlogo {
   display: inline-block;
   width: 327px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 101, sass/style_v2.scss */
+  /* line 102, sass/style_v2.scss */
   .twodoorlogo {
     display: block;
     width: 137px;
@@ -674,18 +679,18 @@ input:focus {
   }
 }
 
-/* line 112, sass/style_v2.scss */
+/* line 113, sass/style_v2.scss */
 .lanaform {
   clear: right;
 }
 @media only screen and (max-width: 767px) {
-  /* line 112, sass/style_v2.scss */
+  /* line 113, sass/style_v2.scss */
   .lanaform {
     margin-bottom: 50px;
   }
 }
 
-/* line 116, sass/style_v2.scss */
+/* line 117, sass/style_v2.scss */
 .lanaform-header {
   background-color: rgba(255, 255, 255, 0.6);
   text-align: center;
@@ -694,26 +699,26 @@ input:focus {
   margin-bottom: -16px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 116, sass/style_v2.scss */
+  /* line 117, sass/style_v2.scss */
   .lanaform-header {
     padding: 20px 0 23px;
   }
 }
 
-/* line 127, sass/style_v2.scss */
+/* line 128, sass/style_v2.scss */
 .lanaform-header-text {
   font-size: 1.9375em;
   font-weight: bold;
   margin: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 127, sass/style_v2.scss */
+  /* line 128, sass/style_v2.scss */
   .lanaform-header-text {
     font-size: 1.125em;
   }
 }
 
-/* line 137, sass/style_v2.scss */
+/* line 138, sass/style_v2.scss */
 .formfields {
   list-style: none;
   background-color: rgba(255, 255, 255, 0.6);
@@ -722,26 +727,26 @@ input:focus {
   overflow: hidden;
 }
 
-/* line 144, sass/style_v2.scss */
+/* line 145, sass/style_v2.scss */
 .formfields-item {
   width: 25%;
   float: left;
   padding-right: 15px;
   margin-bottom: 10px;
 }
-/* line 149, sass/style_v2.scss */
+/* line 150, sass/style_v2.scss */
 .formfields-item:last-child {
   padding-right: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 144, sass/style_v2.scss */
+  /* line 145, sass/style_v2.scss */
   .formfields-item {
     width: 100%;
     padding-right: 0;
   }
 }
 
-/* line 159, sass/style_v2.scss */
+/* line 160, sass/style_v2.scss */
 .formfields-item-label {
   display: block;
   font-weight: 700;
@@ -749,36 +754,36 @@ input:focus {
   margin-bottom: 11px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 159, sass/style_v2.scss */
+  /* line 160, sass/style_v2.scss */
   .formfields-item-label {
     font-size: 0.875em;
   }
 }
 
-/* line 168, sass/style_v2.scss */
+/* line 169, sass/style_v2.scss */
 .formfields-item-input {
   display: block;
   text-align: left;
   background-color: #f28f1b;
   padding: 10px 7px;
 }
-/* line 174, sass/style_v2.scss */
+/* line 175, sass/style_v2.scss */
 .formfields-item-input.focused {
   outline: 2px inset #0c6cce;
 }
-/* line 177, sass/style_v2.scss */
+/* line 178, sass/style_v2.scss */
 .formfields-item-input.invalid {
   border: 2px inset red;
   background-color: #fff;
 }
-/* line 182, sass/style_v2.scss */
+/* line 183, sass/style_v2.scss */
 .formfields-item-input input {
   width: 100%;
   background-color: transparent;
   color: #fff;
 }
 
-/* line 189, sass/style_v2.scss */
+/* line 190, sass/style_v2.scss */
 .formfineprint {
   font-size: 1em;
   color: #a10713;
@@ -790,13 +795,13 @@ input:focus {
   margin: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 189, sass/style_v2.scss */
+  /* line 190, sass/style_v2.scss */
   .formfineprint {
     font-size: 0.875em;
   }
 }
 
-/* line 202, sass/style_v2.scss */
+/* line 203, sass/style_v2.scss */
 .formsubmit {
   min-height: 60px;
   max-width: 223px;
@@ -804,13 +809,13 @@ input:focus {
   margin-top: 26px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 202, sass/style_v2.scss */
+  /* line 203, sass/style_v2.scss */
   .formsubmit {
     min-height: 50px;
   }
 }
 
-/* line 211, sass/style_v2.scss */
+/* line 212, sass/style_v2.scss */
 .button--submit {
   color: #fff;
   font-weight: 700;
@@ -830,20 +835,20 @@ input:focus {
   border: 0;
   margin: 0 auto;
 }
-/* line 224, sass/style_v2.scss */
-.button--submit:active {
+/* line 225, sass/style_v2.scss */
+.button--submit:active, .button--submit.active {
   -webkit-box-shadow: 0px 5px 0px #061c5b;
   -moz-box-shadow: 0px 5px 0px #061c5b;
   box-shadow: 0px 5px 0px #061c5b;
   position: relative;
   top: 4px;
 }
-/* line 229, sass/style_v2.scss */
+/* line 230, sass/style_v2.scss */
 .button--submit:focus {
   outline: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 211, sass/style_v2.scss */
+  /* line 212, sass/style_v2.scss */
   .button--submit {
     padding-top: 10px;
     padding-bottom: 10px;

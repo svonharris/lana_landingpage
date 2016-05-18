@@ -15,7 +15,6 @@
 	<div class="lanacontent">
 		<header class="lanacontent-header">
 			<h1 class="lanacontent-header-title">the honeymoon tour</h1>
-			<!-- <h2 class="lanacontent-header-subtitle">lana del rey</h2> -->
 			<div class="js-logo lanalogo"><img src="./images/lana_logo.png" alt=""></div>
 			<p class="lanacontent-header-text">october 2016<span>with special guest</span></p>
 			<div class="twodoorlogo"><img src="./images/twodoorcinema_logo-blue.png"></div>
@@ -31,31 +30,31 @@
 					<li class="formfields-item">
 						<label for="firstname" class="formfields-item-label">First Name<span class="darkred bold">*</span></label>
 						<span class="formfields-item-input">
-							<input type="text" id="firstname"  required="required" />
+							<input type="text" id="firstname" name="firstname" required />
 						</span>
 					</li>
 					<li class="formfields-item">
 						<label for="lastname" class="formfields-item-label">Last Name<span class="darkred bold">*</span></label>
 						<span class="formfields-item-input">
-							<input type="text" id="lastname"  required="required" />
+							<input type="text" id="lastname" name="lastname" required />
 						</span>
 					</li>
 					<li class="formfields-item">
 						<label for="email" class="formfields-item-label">Email Address<span class="darkred bold">*</span></label>
 						<span class="formfields-item-input">
-							<input type="email" id="email"  required="required" />
+							<input type="email" id="email" name="email" required />
 						</span>
 					</li>
 					<li class="formfields-item">
 						<label for="phone" class="formfields-item-label">Phone Number</label>
 						<span class="formfields-item-input">
-							<input type="tel" pattern="[0-9]" id="phone" />
+							<input type="tel" pattern="[0-9]" id="phone" name="phone" />
 						</span>
 					</li>
 				</ul>
 				<p class="formfineprint">*Required fields</p>
 				<div class="formsubmit">
-					<button type="submit" class="button--submit">Join The Honeymoon</button>
+					<button type="submit" id="js-submit" class="button--submit">Join The Honeymoon</button>
 				</div>
 			</form>
 		</div>

@@ -518,6 +518,13 @@ input:focus {
   outline: 0;
 }
 
+/* line 60, sass/base.scss */
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  background-color: transparent;
+  background-image: none;
+  color: #000000;
+}
+
 @font-face {
   font-family: 'UpperEastSide-webfont';
   src: url("fonts/UpperEastSide-webfont.eot");
@@ -819,7 +826,6 @@ input:focus {
 .button--submit {
   color: #fff;
   font-weight: 700;
-  display: block;
   text-decoration: none;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -827,15 +833,13 @@ input:focus {
   -o-border-radius: 5px;
   border-radius: 5px;
   background: #0c6cce;
-  text-align: center;
   padding: 16px 30px;
   -webkit-box-shadow: 0px 9px 0px #061c5b;
   -moz-box-shadow: 0px 9px 0px #061c5b;
   box-shadow: 0px 9px 0px #061c5b;
   border: 0;
-  margin: 0 auto;
 }
-/* line 225, sass/style_v2.scss */
+/* line 222, sass/style_v2.scss */
 .button--submit:active, .button--submit.active {
   -webkit-box-shadow: 0px 5px 0px #061c5b;
   -moz-box-shadow: 0px 5px 0px #061c5b;
@@ -843,7 +847,7 @@ input:focus {
   position: relative;
   top: 4px;
 }
-/* line 230, sass/style_v2.scss */
+/* line 227, sass/style_v2.scss */
 .button--submit:focus {
   outline: 0;
 }
@@ -853,4 +857,9 @@ input:focus {
     padding-top: 10px;
     padding-bottom: 10px;
   }
+}
+/* line 236, sass/style_v2.scss */
+.button--submit.disabled {
+  opacity: 0.6;
+  pointer-events: none;
 }

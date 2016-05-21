@@ -48,7 +48,7 @@ img {
 }
 
 :-ms-input-placeholder {  
-   color: $placeholder-text; 
+	color: $placeholder-text; 
 }
 input {
 	border: 0;
@@ -56,6 +56,11 @@ input {
 	    border: 0;
 	    outline: 0;
 	}
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: transparent;
+    background-image: none;
+    color: $black;
 }
 @font-face{ 
 	font-family: 'UpperEastSide-webfont';

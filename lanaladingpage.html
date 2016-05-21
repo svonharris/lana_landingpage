@@ -1,70 +1,73 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>The Honeymoon Tour</title>
+<title>Honeymoon Tour</title>
 <meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="css/all.css">
 </head>
 <body>
 
+<div class="bckgrdpattern"></div>
+<div class="js-bckgrdlana bckgrdlana">
+	<img src="./images/lana.png">
+</div>
 <div class="js-container container">
-	<div class="coverimage"></div>
-	<div class="content">
-		<div class="header">
-			<h1 class="header-artist">lana del rey</h1>
-			<h2 class="header-title">the honeymoon <span class="allcaps">us</span> tour</h2>
-			<div class="header-content">
-				<p class="header-content-subtext">featuring special guest TWO DOOR CINEMA CLUB</p>
-			</div>
-			<p class="header-subtext">
-				September 3rd through January 25th. <a href="/tour-dates.com" class="link">Click here for all cities and dates</a>.
-			</p>
-			<p>Get notified when pre-sale tickets go on sale!</p>
-		</div>
+	<div class="lanacontent">
+		<header class="lanacontent-header">
+			<h1 class="lanacontent-header-title">the honeymoon tour</h1>
+			<div class="js-logo lanalogo"><img src="./images/lana_logo.png" alt=""></div>
+			<p class="lanacontent-header-text">october 2016<span>with special guest</span></p>
+			<div class="twodoorlogo"><img src="./images/twodoorcinema_logo-blue.png"></div>
+		</header>
 	</div>
-	<div class="landingform">
-		<div class="landingform-content">
-			<form action="#" method="post">
+	<div class="lanaform">
+		<div class="lanaform-header">
+			<p class="lanaform-header-text">Sign up to get early access to pre-sale tickets.</p>
+		</div>
+		<div class="lanaform-content">
+			<form action="#" method="post" id="signup">
 				<ul class="formfields">
 					<li class="formfields-item">
 						<label for="firstname" class="formfields-item-label">First Name<span class="darkred bold">*</span></label>
-						<span class="formfields-item-input">
-							<input type="text" id="firstname"  required="required" />
+						<span class="js-input formfields-item-input">
+							<input type="text" id="firstname" name="fname" autocomplete="given-name" required />
 						</span>
 					</li>
 					<li class="formfields-item">
 						<label for="lastname" class="formfields-item-label">Last Name<span class="darkred bold">*</span></label>
-						<span class="formfields-item-input">
-							<input type="text" id="lastname"  required="required" />
+						<span class="js-input formfields-item-input">
+							<input type="text" id="lastname" name="lname" autocomplete="family-name" required />
 						</span>
 					</li>
 					<li class="formfields-item">
 						<label for="email" class="formfields-item-label">Email Address<span class="darkred bold">*</span></label>
-						<span class="formfields-item-input">
-							<input type="email" id="email"  required="required" />
+						<span class="js-input formfields-item-input">
+							<input type="email" id="email" name="email" autocomplete="email" required />
 						</span>
 					</li>
 					<li class="formfields-item">
 						<label for="phone" class="formfields-item-label">Phone Number</label>
-						<span class="formfields-item-input">
-							<input type="number" id="phone" placeholder="optional" />
+						<span class="js-input formfields-item-input">
+							<input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[0-9]" maxlength="10" />
 						</span>
 					</li>
 				</ul>
 				<p class="formfineprint">*Required fields</p>
 				<div class="formsubmit">
-					<button type="submit" class="button--submit">Join The Honeymoon</button>
+					<button type="submit" id="js-submit" class="button--submit disabled">Join Mailing List</button>
+					<!-- <button type="reset">Reset</button> -->
 				</div>
 			</form>
-		</div>
-		<div class="landingform-footer">
-			<p>By signing up you will automatically enrolled into a contest to win an all expenses paid trip to Las Vegas to meet Lana Del Rey backstage.</p>
 		</div>
 	</div>
 </div>
 
 
-</body>
+
+
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/function.js"></script>
+</body>
 </html>

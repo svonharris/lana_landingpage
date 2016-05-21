@@ -1,185 +1,210 @@
-.allcaps {
-	text-transform: uppercase;
-}
-.thintext  {
-	font-weight: lighter;
-}
+.allcaps {text-transform: uppercase;}
+.thintext  {font-weight: lighter;}
 .darkred {color: $dark-red;}
 .bold {font-weight: 700;}
+.focused {outline: 2px inset $blue-bright;}
+.error {outline: 2px solid red;}
+
+
+.bckgrdpattern {
+	background-image: url('../images/background_pattern.jpg');
+	background-color: $tan;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.bckgrdlana {
+	display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 54%;
+}
 
 .container {
 	display: none;
     min-width: 320px;
 	max-width: 1200px;
-    position: relative;
 	margin: 0 auto;
-}
-
-.coverimage {
-    width: 56%;
-    height: 660px;
-    background-image: url('../images/lana.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    //margin-left: -20px;
-	@include bp(mobile) {
-	    width: 100%;
-	    height: 500px;
-	    float: none;
-	    background-position: center top;
-	    margin-left: auto;
-	    margin-top: -38px;
-	    margin-right: auto;
-        position: relative;
-	    z-index: -1;
-	}
-}
-
-.content {
-    width: 64%;
-    position: absolute;
-    top: 75px;
-    right: 0;
-    @include bp(mobile) {
-		position: static;
-	    margin: -250px 15px 0;
-	    right: 0;
-    }
-}
-	.header {}
-		.header-artist {
-			font-size: 2em;
-			font-weight: normal;
-			color: $dark-red;
-		    font-weight: 900;
-		    line-height: 28px;
-			-webkit-transform:scale(1,3);
-		    -moz-transform:scale(1,3);
-		    -ms-transform:scale(1,3);
-		    -o-transform:scale(1,3);
-		    transform:scale(1,3);
-			margin-bottom: 20px;
-			@extend .allcaps;
-			@include bp(mobile) {
-			    font-size: 1.5em;
-			    margin: 0;
-			    line-height: 21px;
-		    }
-		}
-		.header-title {
-			font-size: 4.5em;
-			font-weight: 400;
-			color: $honeymoon-blue;
-			font-family: $font-family;
-	        line-height: 75px;
-	        margin-top: 45px;
-    		margin-bottom: 0;
-		    text-transform: capitalize;
-		    @include bp(mobile) {
-		    	font-size: 2.1em;
-	    	    line-height: 33px;
-			    margin-top: 35px;
-			}
-		}
-		.header-content {}
-			.header-content-subtext {
-			    display: inline-block;
-			    vertical-align: middle;
-			    margin-right: 3px;
-			}
-			.header-content-featureartist {
-			    display: inline-block;
-			    vertical-align: middle;
-				margin: 0;
-			}
-				.featureartist-title {
-					font-weight: 700;
-					@extend .allcaps;
-				}
-
-
-.landingform {
-	clear: both;
-    margin: 0 20px;
     position: relative;
-    z-index: 1;
-    top: -170px;
     @include bp(mobile) {
-    	position: static;
-    	margin-top: 50px;
-    	margin-left: 10px;
-    	margin-right: 10px;
+        padding-top: 15px;
+	    padding-left: 15px;
+	    padding-right: 15px;
     }
 }
 
-	.landingform-content {}
-
-		.formfields {
-			list-style: none;
-		    padding: 0;
-		    margin: 0;
-	        overflow: hidden;
+	
+	.lanacontent {
+	    max-width: 70%;
+	    width: 100%;
+	    float: right;
+		@include bp(mobile) {
+			max-width: 100%;
 		}
-			.formfields-item {
-			    width: 25%;
-			    float: left;
-			    padding-right: 15px;
-			    margin-bottom: 10px;
-			    @include box-sizing(border-box);
-				&:first-child .formfields-item-input.focused {
-				    margin-left: 2px;
-				}
-				&:last-child {
-				    padding-right: 0;
-				    .formfields-item-input.focused {
-					    margin-right: 2px;
-					}
-				}
-
+	}
+		.lanacontent-header {
+			margin-bottom: 34px;
+		}
+			.lanacontent-header-title {
+				//font-family: 'Italianno', cursive;
+				font-family: 'Great Vibes', cursive;
+			    font-weight: 400;
+			    text-transform: capitalize;
+			    color: $blue-bright;
 			    @include bp(mobile) {
-			    	width: 100%;
-		    	    padding-right: 0;
+			    	font-size: 2.23em;
+   					text-align: center;
 			    }
 			}
 
-				.formfields-item-label {
+			/*.lanacontent-header-subtitle {
+			    line-height: 1;
+			    -webkit-transform: scale(1, 2);
+			    -moz-transform: scale(1, 2);
+			    -ms-transform: scale(1, 2);
+			    -o-transform: scale(1, 2);
+			    transform: scale(1, 2);
+			    margin: 0;
+			    height: 84px;
+			    overflow: hidden;
+			    margin-bottom: 53px;
+				@extend .allcaps;
+			}*/
+
+			.lanalogo {
+				@include bp(mobile) {
+    				width: 254px;
+				    margin: 0 auto 15px;
+				}
+			}
+
+			.lanacontent-header-text {
+			    display: inline-block;
+		        line-height: 1;
+    			margin: 0;
+			    vertical-align: top;
+			    @include bp(mobile) {
 				    display: block;
-			        font-weight: 700;
-			        margin-bottom: 5px;
 			        text-align: center;
-					@extend .allcaps;
-					@include bp(mobile) {
-						text-align: left;
-					}
-				}
-				.formfields-item-input  {
+				    margin-bottom: 10px;
+			    }
+			}
+
+			.twodoorlogo {
+    			display: inline-block;
+			    width: 327px;
+			    @include bp(mobile) {
     				display: block;
-    				text-align: left;
-					background-color: $dark-red;
-				    padding: 8px 7px;
+			    	width: 137px;
+    				margin: 0 auto;
+			    }
+			}
 
-				    &.focused {
-				    	outline: 2px inset $blue;
-			    	}
-				    &.invalid {
-				    	border: 2px inset red;
-				    	background-color: #fff;
-			    	}
 
-				    input {
-					    width: 100%;
-						background-color: transparent;
-						color: #fff;
+	.lanaform {
+	    clear: right;
+		@include bp(mobile) {margin-bottom: 50px;}
+	}
+		.lanaform-header {
+			background-color: rgba(255, 255, 255, 0.6);
+		    text-align: center;
+	        line-height: 1;
+		    padding: 26px 0 37px;
+		    margin-bottom: -16px;
+		    @include bp(mobile) {
+		    	padding: 20px 0 23px;
+		    }
+		}
+
+		    .lanaform-header-text {
+		        font-size: 1.9375em;
+		    	font-weight: bold;
+	    	    margin: 0;
+	    	    @include bp(mobile) { 
+	    	    	font-size: 1.125em;
+	    	    }
+		    }
+
+		.lanaform-content {}
+			.formfields {
+				list-style: none;
+				background-color: rgba(255, 255, 255, 0.6);
+			    padding: 0 20px;
+			    margin-bottom: 0;
+		        overflow: hidden;
+			}
+				.formfields-item {
+				    width: 25%;
+				    float: left;
+				    padding-right: 15px;
+				    margin-bottom: 10px;
+					&:last-child {
+					    padding-right: 0;
 					}
+
+				    @include bp(mobile) {
+				    	width: 100%;
+			    	    padding-right: 0;
+				    }
 				}
+
+					.formfields-item-label {
+					    display: block;
+				        font-weight: 700;
+				        line-height: 1;
+				        margin-bottom: 11px;
+				        @include bp(mobile) {
+				        	font-size: 0.875em;
+				        }
+					}
+					.formfields-item-input  {
+	    				display: block;
+	    				text-align: left;
+						background-color: $orange;
+					    padding: 10px 7px;
+
+					    &.focused {
+					    	outline: 2px inset $blue-bright;
+				    	}
+					    &.invalid {
+					    	border: 2px inset red;
+					    	background-color: #fff;
+				    	}
+
+					    input {
+						    width: 100%;
+							background-color: transparent;
+							color: #fff;
+						}
+					}
+			
 			.formfineprint {
 				font-size: 1em;
 				color: $dark-red;
 				text-align: left;
 				text-indent: 4px;
+			    font-weight: bold;
+			    background-color: rgba(255, 255, 255, 0.6);
+		        padding: 0 20px 5px;
+	            margin: 0;
+		        @include bp(mobile) {
+		        	font-size: 0.875em;
+		        }
 			}
 			.formsubmit {
-			    min-height: 70px;
+		        min-height: 60px;
+			    max-width: 223px;
+			    margin: 26px auto;
+			    margin-top: 26px;
 			    @include bp(mobile) {
 		    	    min-height: 50px;
 			    }
@@ -187,18 +212,15 @@
 				.button--submit {
 					color: #fff;
 					font-weight: 700;
-					display: block;
 					text-decoration: none;
 					@include border-radius(5px);
-					background: $blue;
-					text-align: center;
-					padding: 20px 30px;
-				    @include box-shadow(0px 9px 0px $honeymoon-blue);
+					background: $blue-bright;
+					padding: 16px 30px;
+				    @include box-shadow(0px 9px 0px $blue-dark);
 				    border: 0;
-				    margin: 0 auto;
 
-				    &:active {
-					    @include box-shadow(0px 5px 0px $honeymoon-blue);
+				    &:active, &.active {
+					    @include box-shadow(0px 5px 0px $blue-dark);
 					    position:relative;
 					    top:4px;
 					}
@@ -210,12 +232,9 @@
 			    	    padding-top: 10px;
 			    	    padding-bottom: 10px;
 				    }
+
+				    &.disabled {
+		     			opacity: 0.6;
+  						pointer-events: none;
+				    }
 				}
-
-	.landingform-footer {
-	    margin-bottom: 45px;
-	}
-
-
-
-

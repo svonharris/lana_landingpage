@@ -37,18 +37,22 @@ img {
 }
 ::-webkit-input-placeholder {
    color: $placeholder-text;
+   opacity: .7;
 }
 
 :-moz-placeholder {
    color: $placeholder-text; 
+   opacity: .7;
 }
 
 ::-moz-placeholder {
-   color: $placeholder-text;  
+   color: $placeholder-text; 
+   opacity: .7; 
 }
 
 :-ms-input-placeholder {  
 	color: $placeholder-text; 
+   opacity: .7;
 }
 input {
 	border: 0;

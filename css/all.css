@@ -491,34 +491,38 @@ img {
 /* line 38, sass/base.scss */
 ::-webkit-input-placeholder {
   color: #ffffff;
+  opacity: .7;
 }
 
-/* line 42, sass/base.scss */
+/* line 43, sass/base.scss */
 :-moz-placeholder {
   color: #ffffff;
+  opacity: .7;
 }
 
-/* line 46, sass/base.scss */
+/* line 48, sass/base.scss */
 ::-moz-placeholder {
   color: #ffffff;
-}
-
-/* line 50, sass/base.scss */
-:-ms-input-placeholder {
-  color: #ffffff;
+  opacity: .7;
 }
 
 /* line 53, sass/base.scss */
+:-ms-input-placeholder {
+  color: #ffffff;
+  opacity: .7;
+}
+
+/* line 57, sass/base.scss */
 input {
   border: 0;
 }
-/* line 55, sass/base.scss */
+/* line 59, sass/base.scss */
 input:focus {
   border: 0;
   outline: 0;
 }
 
-/* line 60, sass/base.scss */
+/* line 64, sass/base.scss */
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   background-color: transparent;
   background-image: none;
@@ -530,37 +534,37 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   src: url("fonts/UpperEastSide-webfont.eot");
   src: url("fonts/UpperEastSide-webfont.eot?iefix") format("eot"), url("fonts/UpperEastSide-webfont.woff") format("woff"), url("fonts/UpperEastSide-webfont.ttf") format("truetype"), url("fonts/UpperEastSide-webfont.svg#webfont") format("svg");
 }
-/* line 1, sass/style_v2.scss */
+/* line 1, sass/style.scss */
 .allcaps {
   text-transform: uppercase;
 }
 
-/* line 2, sass/style_v2.scss */
+/* line 2, sass/style.scss */
 .thintext {
   font-weight: lighter;
 }
 
-/* line 3, sass/style_v2.scss */
+/* line 3, sass/style.scss */
 .darkred {
   color: #a10713;
 }
 
-/* line 4, sass/style_v2.scss */
+/* line 4, sass/style.scss */
 .bold {
   font-weight: 700;
 }
 
-/* line 5, sass/style_v2.scss */
+/* line 5, sass/style.scss */
 .focused {
   outline: 2px inset #0c6cce;
 }
 
-/* line 6, sass/style_v2.scss */
+/* line 6, sass/style.scss */
 .error {
   outline: 2px solid red;
 }
 
-/* line 9, sass/style_v2.scss */
+/* line 9, sass/style.scss */
 .bckgrdpattern {
   background-image: url("../images/background_pattern.jpg");
   background-color: #f2e6d6;
@@ -576,7 +580,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 0;
 }
 
-/* line 24, sass/style_v2.scss */
+/* line 24, sass/style.scss */
 .bckgrdlana {
   display: none;
   position: fixed;
@@ -585,7 +589,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   width: 54%;
 }
 
-/* line 32, sass/style_v2.scss */
+/* line 32, sass/style.scss */
 .container {
   display: none;
   min-width: 320px;
@@ -594,7 +598,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   position: relative;
 }
 @media only screen and (max-width: 767px) {
-  /* line 32, sass/style_v2.scss */
+  /* line 32, sass/style.scss */
   .container {
     padding-top: 15px;
     padding-left: 15px;
@@ -602,25 +606,25 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   }
 }
 
-/* line 46, sass/style_v2.scss */
+/* line 46, sass/style.scss */
 .lanacontent {
   max-width: 70%;
   width: 100%;
   float: right;
 }
 @media only screen and (max-width: 767px) {
-  /* line 46, sass/style_v2.scss */
+  /* line 46, sass/style.scss */
   .lanacontent {
     max-width: 100%;
   }
 }
 
-/* line 54, sass/style_v2.scss */
+/* line 54, sass/style.scss */
 .lanacontent-header {
   margin-bottom: 34px;
 }
 
-/* line 57, sass/style_v2.scss */
+/* line 57, sass/style.scss */
 .lanacontent-header-title {
   font-family: 'Great Vibes', cursive;
   font-weight: 400;
@@ -628,7 +632,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   color: #0c6cce;
 }
 @media only screen and (max-width: 767px) {
-  /* line 57, sass/style_v2.scss */
+  /* line 57, sass/style.scss */
   .lanacontent-header-title {
     font-size: 2.23em;
     text-align: center;
@@ -649,14 +653,14 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	@extend .allcaps;
 }*/
 @media only screen and (max-width: 767px) {
-  /* line 83, sass/style_v2.scss */
+  /* line 83, sass/style.scss */
   .lanalogo {
     width: 254px;
     margin: 0 auto 15px;
   }
 }
 
-/* line 90, sass/style_v2.scss */
+/* line 90, sass/style.scss */
 .lanacontent-header-text {
   display: inline-block;
   line-height: 1;
@@ -664,7 +668,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   vertical-align: top;
 }
 @media only screen and (max-width: 767px) {
-  /* line 90, sass/style_v2.scss */
+  /* line 90, sass/style.scss */
   .lanacontent-header-text {
     display: block;
     text-align: center;
@@ -672,13 +676,13 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   }
 }
 
-/* line 102, sass/style_v2.scss */
+/* line 102, sass/style.scss */
 .twodoorlogo {
   display: inline-block;
   width: 327px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 102, sass/style_v2.scss */
+  /* line 102, sass/style.scss */
   .twodoorlogo {
     display: block;
     width: 137px;
@@ -686,18 +690,18 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   }
 }
 
-/* line 113, sass/style_v2.scss */
+/* line 113, sass/style.scss */
 .lanaform {
   clear: right;
 }
 @media only screen and (max-width: 767px) {
-  /* line 113, sass/style_v2.scss */
+  /* line 113, sass/style.scss */
   .lanaform {
     margin-bottom: 50px;
   }
 }
 
-/* line 117, sass/style_v2.scss */
+/* line 117, sass/style.scss */
 .lanaform-header {
   background-color: rgba(255, 255, 255, 0.6);
   text-align: center;
@@ -706,26 +710,26 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin-bottom: -16px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 117, sass/style_v2.scss */
+  /* line 117, sass/style.scss */
   .lanaform-header {
     padding: 20px 0 23px;
   }
 }
 
-/* line 128, sass/style_v2.scss */
+/* line 128, sass/style.scss */
 .lanaform-header-text {
   font-size: 1.9375em;
   font-weight: bold;
   margin: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 128, sass/style_v2.scss */
+  /* line 128, sass/style.scss */
   .lanaform-header-text {
     font-size: 1.125em;
   }
 }
 
-/* line 138, sass/style_v2.scss */
+/* line 138, sass/style.scss */
 .formfields {
   list-style: none;
   background-color: rgba(255, 255, 255, 0.6);
@@ -734,26 +738,26 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   overflow: hidden;
 }
 
-/* line 145, sass/style_v2.scss */
+/* line 145, sass/style.scss */
 .formfields-item {
   width: 25%;
   float: left;
   padding-right: 15px;
   margin-bottom: 10px;
 }
-/* line 150, sass/style_v2.scss */
+/* line 150, sass/style.scss */
 .formfields-item:last-child {
   padding-right: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 145, sass/style_v2.scss */
+  /* line 145, sass/style.scss */
   .formfields-item {
     width: 100%;
     padding-right: 0;
   }
 }
 
-/* line 160, sass/style_v2.scss */
+/* line 160, sass/style.scss */
 .formfields-item-label {
   display: block;
   font-weight: 700;
@@ -761,36 +765,36 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin-bottom: 11px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 160, sass/style_v2.scss */
+  /* line 160, sass/style.scss */
   .formfields-item-label {
     font-size: 0.875em;
   }
 }
 
-/* line 169, sass/style_v2.scss */
+/* line 169, sass/style.scss */
 .formfields-item-input {
   display: block;
   text-align: left;
   background-color: #f28f1b;
   padding: 10px 7px;
 }
-/* line 175, sass/style_v2.scss */
+/* line 175, sass/style.scss */
 .formfields-item-input.focused {
   outline: 2px inset #0c6cce;
 }
-/* line 178, sass/style_v2.scss */
+/* line 178, sass/style.scss */
 .formfields-item-input.invalid {
   border: 2px inset red;
   background-color: #fff;
 }
-/* line 183, sass/style_v2.scss */
+/* line 183, sass/style.scss */
 .formfields-item-input input {
   width: 100%;
   background-color: transparent;
   color: #fff;
 }
 
-/* line 190, sass/style_v2.scss */
+/* line 190, sass/style.scss */
 .formfineprint {
   font-size: 1em;
   color: #a10713;
@@ -802,13 +806,13 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 190, sass/style_v2.scss */
+  /* line 190, sass/style.scss */
   .formfineprint {
     font-size: 0.875em;
   }
 }
 
-/* line 203, sass/style_v2.scss */
+/* line 203, sass/style.scss */
 .formsubmit {
   min-height: 60px;
   max-width: 223px;
@@ -816,13 +820,13 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin-top: 26px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 203, sass/style_v2.scss */
+  /* line 203, sass/style.scss */
   .formsubmit {
     min-height: 50px;
   }
 }
 
-/* line 212, sass/style_v2.scss */
+/* line 212, sass/style.scss */
 .button--submit {
   color: #fff;
   font-weight: 700;
@@ -839,7 +843,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   box-shadow: 0px 9px 0px #061c5b;
   border: 0;
 }
-/* line 222, sass/style_v2.scss */
+/* line 222, sass/style.scss */
 .button--submit:active, .button--submit.active {
   -webkit-box-shadow: 0px 5px 0px #061c5b;
   -moz-box-shadow: 0px 5px 0px #061c5b;
@@ -847,18 +851,18 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   position: relative;
   top: 4px;
 }
-/* line 227, sass/style_v2.scss */
+/* line 227, sass/style.scss */
 .button--submit:focus {
   outline: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 212, sass/style_v2.scss */
+  /* line 212, sass/style.scss */
   .button--submit {
     padding-top: 10px;
     padding-bottom: 10px;
   }
 }
-/* line 236, sass/style_v2.scss */
+/* line 236, sass/style.scss */
 .button--submit.disabled {
   opacity: 0.6;
   pointer-events: none;

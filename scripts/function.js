@@ -83,24 +83,28 @@ $(document).ready(function() {
       var v = inputsArr[i].val();    
       switch(n) {
         case "phone":
-          console.log(v + " is a phone number");
+          //console.log(v + " is a phone number");
           phoneNumber(v);
           break;
         
         case "fname":
-          console.log(v + " is a first name");
+          //console.log(v + " is a first name");
+          birthName(v);
           break;
         
         case "lname":
-          console.log(v + " is a last name");
+          //console.log(v + " is a last name");
+          birthName(v);
           break;
         
         case "email":
-          console.log(v + " is an email");
+          //console.log(v + " is an email");
+          emailAddres(v);
           break;
         
         case "birthdate":
-          console.log(v + " is a birthdate");
+          //console.log(v + " is a birthdate");
+          birthDate(v);
           break; 
         
         default:
@@ -111,14 +115,36 @@ $(document).ready(function() {
   }
 
   function phoneNumber(phone) {
-    if (/\D/g.test(phone)) {
-      console.log("incorrect entry");
-      //errorClass(phone);
-    } else if (phone.length !== 10) {
-      console.log("must have 10 digits");
+    if (phone === null || phone === "") {
+      //do nothing
+    } else {
+      var regex = /^\d{10}$/;
+      //var regex = /^\d{3}-\d{3}-\d{4}$/;
+      if (!regex.test(phone)) {
+        console.log("phone number must have 10 digits");
+        //console.log("phone number must have 10 digits with dashes");
+        //errorClass(phone);
+      }
     }
   }
-
+  function emailAddres(email) {
+    var regex = /^[\w\.\-\_\+]+@[\w-]+(\.\w{2,4})+$/;
+    if (!regex.test(email)) {
+      console.log("email is incorrect");
+    }
+  }
+  function birthName(name) {
+    var regex = /^\w+([a-z]|[A-Z])$/;
+    if (!regex.test(name)) {
+      console.log("Name must be alphabetic characters only");
+    }
+  }
+  function birthDate(bday) {
+    var regex = /^\d{2}\/\d{2}\/\d{4}$/;
+    if (!regex.test(bday)) {
+      console.log("Birthdate must be MM/DD/YYYY");
+    }
+  }
 
 
 

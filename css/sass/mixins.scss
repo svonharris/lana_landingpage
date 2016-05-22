@@ -1,14 +1,19 @@
 @mixin border-radius($value) {
 	-webkit-border-radius: $value;
-    -moz-border-radius: $value;
-    -ms-border-radius: $value;
-    -o-border-radius: $value;
-    border-radius: $value;
+  -moz-border-radius: $value;
+  -ms-border-radius: $value;
+  -o-border-radius: $value;
+  border-radius: $value;
 }
 @mixin box-shadow($value) {
 	-webkit-box-shadow: $value;
-    -moz-box-shadow: $value;
-    box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+@mixin text-fill-color($value) {
+  -webkit-text-fill-color: $value;
+  -moz-text-fill-color: $value;
+  text-fill-color: $value;
 }
 @mixin box-sizing($value) {
 	-webkit-box-sizing: $value;

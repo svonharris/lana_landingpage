@@ -524,9 +524,12 @@ input:focus {
 
 /* line 64, sass/base.scss */
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
-  background-color: transparent;
-  background-image: none;
-  color: #000000;
+  -webkit-box-shadow: 0 0 0px 1000px #f28f1b inset;
+  -moz-box-shadow: 0 0 0px 1000px #f28f1b inset;
+  box-shadow: 0 0 0px 1000px #f28f1b inset;
+  -webkit-text-fill-color: #ffffff !important;
+  -moz-text-fill-color: #ffffff !important;
+  text-fill-color: #ffffff !important;
 }
 
 @font-face {
@@ -781,20 +784,21 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 /* line 175, sass/style.scss */
 .formfields-item-input.focused {
   outline: 2px inset #0c6cce;
+  color: #000000;
 }
-/* line 178, sass/style.scss */
+/* line 179, sass/style.scss */
 .formfields-item-input.invalid {
   border: 2px inset red;
   background-color: #fff;
 }
-/* line 183, sass/style.scss */
+/* line 184, sass/style.scss */
 .formfields-item-input input {
   width: 100%;
   background-color: transparent;
   color: #fff;
 }
 
-/* line 190, sass/style.scss */
+/* line 191, sass/style.scss */
 .formfineprint {
   font-size: 1em;
   color: #a10713;
@@ -806,13 +810,13 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 190, sass/style.scss */
+  /* line 191, sass/style.scss */
   .formfineprint {
     font-size: 0.875em;
   }
 }
 
-/* line 203, sass/style.scss */
+/* line 204, sass/style.scss */
 .formsubmit {
   min-height: 60px;
   max-width: 223px;
@@ -820,13 +824,13 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin-top: 26px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 203, sass/style.scss */
+  /* line 204, sass/style.scss */
   .formsubmit {
     min-height: 50px;
   }
 }
 
-/* line 212, sass/style.scss */
+/* line 213, sass/style.scss */
 .button--submit {
   color: #fff;
   font-weight: 700;
@@ -843,7 +847,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   box-shadow: 0px 9px 0px #061c5b;
   border: 0;
 }
-/* line 222, sass/style.scss */
+/* line 223, sass/style.scss */
 .button--submit:active, .button--submit.active {
   -webkit-box-shadow: 0px 5px 0px #061c5b;
   -moz-box-shadow: 0px 5px 0px #061c5b;
@@ -851,18 +855,18 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   position: relative;
   top: 4px;
 }
-/* line 227, sass/style.scss */
+/* line 228, sass/style.scss */
 .button--submit:focus {
   outline: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 212, sass/style.scss */
+  /* line 213, sass/style.scss */
   .button--submit {
     padding-top: 10px;
     padding-bottom: 10px;
   }
 }
-/* line 236, sass/style.scss */
+/* line 237, sass/style.scss */
 .button--submit.disabled {
   opacity: 0.6;
   pointer-events: none;

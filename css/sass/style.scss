@@ -174,6 +174,7 @@
 
 					    &.focused {
 					    	outline: 2px inset $blue-bright;
+					    	color: $black;
 				    	}
 					    &.invalid {
 					    	border: 2px inset red;

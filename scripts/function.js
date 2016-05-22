@@ -25,18 +25,20 @@ $(document).ready(function() {
     if (input.prop('required')) {
       var n = input.val();
       if (n === null || n === "") {
-        //console.log("field empty");
         errorClass(input);
+        disable()
       } else {
-        //console.log("field filled out");
         correctClass(input);
       }
     }
   }
 
+  function disable() {
+    $('#js-submit').addClass('disabled');
+  }
+
   function errorClass(element) {
     $(element).parent().addClass('error');
-    $('#js-submit').addClass('disabled');
   }
 
   function correctClass(element) {
@@ -52,10 +54,8 @@ $(document).ready(function() {
 
   $('#js-submit').click(function(e) {
     e.preventDefault();
-    $(this).addClass('active');
-    $(this).blur(function() {
-      $(this).removeClass('active');
-    });
+    var btn = $(this);
+    buttonActive(btn);    
     signUpForm($('#signup'));
     // alert("Thanks");
     // e.preventDefault(msg, function() {
@@ -67,6 +67,13 @@ $(document).ready(function() {
     //   }
     // });
   });
+
+  function buttonActive(btn) {
+    btn.addClass('active');
+    btn.blur(function() {
+      btn.removeClass('active');
+    });
+  }
 
   function signUpForm(form) {
     var inputs = [];
@@ -83,28 +90,43 @@ $(document).ready(function() {
       var v = inputsArr[i].val();    
       switch(n) {
         case "phone":
-          //console.log(v + " is a phone number");
-          phoneNumber(v);
+          var pn = phoneNumber(v);
+          if (pn === false) {
+            errorClass(inputsArr[i]);
+            console.log("phone number must have 10 digits");
+          }
           break;
         
         case "fname":
-          //console.log(v + " is a first name");
-          birthName(v);
+          var bn = birthName(v);
+          if (bn === false) {
+            errorClass(inputsArr[i]);
+            console.log("Name must be alphabetic characters only");
+          }
           break;
         
         case "lname":
-          //console.log(v + " is a last name");
-          birthName(v);
+          var bn = birthName(v);
+          if (bn === false) {
+            errorClass(inputsArr[i]);
+            console.log("Name must be alphabetic characters only");
+          }
           break;
         
         case "email":
-          //console.log(v + " is an email");
-          emailAddres(v);
+          var eaddy = emailAddres(v);
+          if (eaddy === false) {
+            errorClass(inputsArr[i]);
+            console.log("email is incorrect");
+          }
           break;
         
         case "birthdate":
-          //console.log(v + " is a birthdate");
-          birthDate(v);
+          var bday = birthDate(v);
+          if (bday === false) {
+            errorClass(inputsArr[i]);
+            console.log("Birthdate must be MM/DD/YYYY");
+          }
           break; 
         
         default:
@@ -116,33 +138,37 @@ $(document).ready(function() {
 
   function phoneNumber(phone) {
     if (phone === null || phone === "") {
-      //do nothing
+      return true;
     } else {
       var regex = /^\d{10}$/;
-      //var regex = /^\d{3}-\d{3}-\d{4}$/;
       if (!regex.test(phone)) {
-        console.log("phone number must have 10 digits");
-        //console.log("phone number must have 10 digits with dashes");
-        //errorClass(phone);
+        return false;
       }
     }
   }
   function emailAddres(email) {
-    var regex = /^[\w\.\-\_\+]+@[\w-]+(\.\w{2,4})+$/;
+    var regex = /^[\w\.\-\_\+]+@[\w-]+\.\w{2,4}$/;
     if (!regex.test(email)) {
-      console.log("email is incorrect");
+      return false;
     }
   }
   function birthName(name) {
-    var regex = /^\w+([a-z]|[A-Z])$/;
-    if (!regex.test(name)) {
-      console.log("Name must be alphabetic characters only");
+    var regex = /^[a-zA-Z]+\w[\w\-\ ]+[a-zA-Z]+$/;
+    if (regex.test(name)) {
+      var regex = /[0-9]/;
+      if (regex.test(name)) {
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      return false;
     }
   }
   function birthDate(bday) {
     var regex = /^\d{2}\/\d{2}\/\d{4}$/;
     if (!regex.test(bday)) {
-      console.log("Birthdate must be MM/DD/YYYY");
+      return false;
     }
   }
 

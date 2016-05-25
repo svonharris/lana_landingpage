@@ -564,7 +564,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 /* line 6, sass/style.scss */
 .error {
-  outline: 2px solid red;
+  outline: 2px solid #a10713;
 }
 
 /* line 9, sass/style.scss */
@@ -798,25 +798,33 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   color: #fff;
 }
 
-/* line 191, sass/style.scss */
+/* line 190, sass/style.scss */
+.formfields-item-errormsg {
+  display: none;
+  color: #a10713;
+  font-weight: bold;
+  margin-top: 7px;
+}
+
+/* line 197, sass/style.scss */
 .formfineprint {
   font-size: 1em;
   color: #a10713;
   text-align: left;
   text-indent: 4px;
-  font-weight: bold;
+  font-weight: 700;
   background-color: rgba(255, 255, 255, 0.6);
   padding: 0 20px 5px;
   margin: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 191, sass/style.scss */
+  /* line 197, sass/style.scss */
   .formfineprint {
     font-size: 0.875em;
   }
 }
 
-/* line 204, sass/style.scss */
+/* line 210, sass/style.scss */
 .formsubmit {
   min-height: 60px;
   max-width: 223px;
@@ -824,13 +832,13 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin-top: 26px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 204, sass/style.scss */
+  /* line 210, sass/style.scss */
   .formsubmit {
     min-height: 50px;
   }
 }
 
-/* line 213, sass/style.scss */
+/* line 219, sass/style.scss */
 .button--submit {
   color: #fff;
   font-weight: 700;
@@ -847,7 +855,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   box-shadow: 0px 9px 0px #061c5b;
   border: 0;
 }
-/* line 223, sass/style.scss */
+/* line 229, sass/style.scss */
 .button--submit:active, .button--submit.active {
   -webkit-box-shadow: 0px 5px 0px #061c5b;
   -moz-box-shadow: 0px 5px 0px #061c5b;
@@ -855,18 +863,18 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   position: relative;
   top: 4px;
 }
-/* line 228, sass/style.scss */
+/* line 234, sass/style.scss */
 .button--submit:focus {
   outline: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 213, sass/style.scss */
+  /* line 219, sass/style.scss */
   .button--submit {
     padding-top: 10px;
     padding-bottom: 10px;
   }
 }
-/* line 237, sass/style.scss */
+/* line 243, sass/style.scss */
 .button--submit.disabled {
   opacity: 0.6;
   pointer-events: none;

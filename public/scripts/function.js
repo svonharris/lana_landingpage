@@ -63,16 +63,13 @@ $(document).ready(function() {
     e.preventDefault();
     buttonActive($(this));    
     var signUpForm = verification($('#signup'));
-    // console.log(signUpForm);
     $.ajax({
-      type: 'post',
-      url: 'server.rb',
-      data: 'signUpForm',
-      dataType: 'json'
-    }).done(function(msg) {
-      // console.log(msg);
+      type: 'POST',
+      url: '/signup',
+      data: {signup_form: JSON.stringify(signUpForm)}
     });
   });
+
 
   function buttonActive(btn) {
     btn.addClass('active');
@@ -130,7 +127,7 @@ $(document).ready(function() {
       if (patternval === false) {
         correctInputs.push("false");
         errorMsg(inputnum, text);
-      } else {
+      } else if (patternval === true) {
         customer[name] = value;
         successMsg(inputnum, "");
       }
@@ -156,18 +153,22 @@ $(document).ready(function() {
     }
     function phoneNumber(phone) {
       if (phone === null || phone === "") {
-        return true;
+        return undefined;
       } else {
         var regex = /^\d{10}$/;
-        if (!regex.test(phone)) {
+        if (regex.test(phone) === false) {
           return false;
+        } else {
+          return true;
         }
       }
     }
     function emailAddres(email) {
       var regex = /^[\w\.\-\_\+]+@[\w-]+\.\w{2,4}$/;
-      if (!regex.test(email)) {
+      if (regex.test(email) === false) {
         return false;
+      } else {
+        return true;
       }
     }
     function birthName(name) {
@@ -187,8 +188,10 @@ $(document).ready(function() {
     }
     function birthDate(bday) {
       var regex = /^\d{2}\/\d{2}\/\d{4}$/;
-      if (!regex.test(bday)) {
+      if (regex.test(bday) === false) {
         return false;
+      } else {
+        return true;
       }
     }
 

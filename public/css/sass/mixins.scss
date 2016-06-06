@@ -1,6 +1,14 @@
+.allcaps {text-transform: uppercase;}
+.thintext  {font-weight: lighter;}
+.darkred {color: $dark-red;}
+.brightblue {color: $blue-bright;}
+.bold {font-weight: 700;}
+.focused {outline: 2px inset $blue-bright;}
+.error {outline: 2px solid $dark-red;}
+
 @mixin border-radius($value) {
   -webkit-border-radius: $value;
-  -moz-border-radius: $value;
+  -moz-border-radius: $value; 
   -ms-border-radius: $value;
   -o-border-radius: $value;
   border-radius: $value;
@@ -19,6 +27,11 @@
   -webkit-box-sizing: $value;
   -moz-box-sizing: $value;
   box-sizing: $value;
+}
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  transform: $value;
 }
 
 

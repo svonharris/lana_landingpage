@@ -18,11 +18,18 @@ $(document).ready(function() {
   function highlight() { //outlines input field when focus and removes once unfocused(blur)
     $(':input').focus(function() {
       var field = $(this);
-      field.parent().addClass('focused');
-      field.blur(function() {
-        field.parent().removeClass('focused');
-        required(field);
-      });
+      if (field.is(':button')) {
+        field.addClass('focused');
+        field.blur(function() {
+          field.removeClass('focused');
+        });
+      } else {
+        field.parent().addClass('focused');
+        field.blur(function() {
+          field.parent().removeClass('focused');
+          required(field);
+        });
+      }
     });
   }
 
@@ -64,9 +71,13 @@ $(document).ready(function() {
     buttonActive($(this));    
     var signUpForm = verification($('#signup'));
     $.ajax({
-      type: 'POST',
       url: '/signup',
+      type: 'POST',
       data: {signup_form: JSON.stringify(signUpForm)}
+    }).done(function(msg) {
+      // $('body').html(msg);
+      console.log(msg);
+      //if (msg === '304') {console.log("success");}
     });
   });
 

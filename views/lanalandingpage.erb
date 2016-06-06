@@ -16,16 +16,28 @@
 		<header class="lanacontent-header">
 			<h1 class="lanacontent-header-title">the honeymoon tour</h1>
 			<div class="js-logo lanalogo"><img src="../images/lana_logo.png" alt=""></div>
-			<p class="lanacontent-header-text">october 2016<span>with special guest</span></p>
-			<div class="twodoorlogo"><img src="../images/twodoorcinema_logo-blue.png"></div>
+			<p class="lanacontent-header-text"><span class="brightblue bold">October 2016</span> with special guest</p>
+			<div class="twodoorlogo"><img src="../images/twodoorcinema_logo-blue.png" alt="Two Door Cinema Club band logo"></div>
 		</header>
 	</div>
 	<div class="lanaform">
-		<div class="lanaform-header">
-			<p class="lanaform-header-text">Sign up to get early access to pre-sale tickets.</p>
-		</div>
-		<div class="lanaform-content">
-			<form action="/signup" method="post" id="signup">
+		<ul>
+			<% @errors.each do |error| %>
+				<li>#{flash[: <%= error %> ]}</li>
+
+				<!-- 
+					flash[:email] = "Email"
+					#{flash[:email]} 
+				-->
+
+			<% end %>
+		</ul>
+	
+		<form action="/signup" method="post" id="signup">
+			<div class="formcontent">
+				<div class="formheader">
+					<p class="formheader-text">Sign up to get early access to pre-sale tickets.</p>
+				</div>
 				<ul class="formfields">
 					<li class="formfields-item">
 						<label for="firstname" class="formfields-item-label">First Name<span class="darkred bold">*</span></label>
@@ -57,12 +69,16 @@
 					</li>
 				</ul>
 				<p class="formfineprint">*Required fields</p>
-				<div class="formsubmit">
-					<button type="submit" id="js-submit" class="button--submit disabled">Join Mailing List</button>
-					<!-- <button type="reset">Reset</button> -->
-				</div>
-			</form>
-		</div>
+			</div>
+			<div class="formsubmit">
+				<button type="submit" id="js-submit" class="button--submit disabled">Join Mailing List</button>
+				<button type="reset" class="button--reset">Reset</button>
+			</div>
+		</form>
+	</div>
+	<div class="lanasite">
+		<a href="../cheese" class="lanasite-link">Continue to site &rarr;</a>
+		<a href="http://lanadelrey.com/gallery/" class="lanasite-link">Continue to site</a>
 	</div>
 </div>
 

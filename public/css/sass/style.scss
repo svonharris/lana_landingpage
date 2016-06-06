@@ -1,10 +1,3 @@
-.allcaps {text-transform: uppercase;}
-.thintext  {font-weight: lighter;}
-.darkred {color: $dark-red;}
-.bold {font-weight: 700;}
-.focused {outline: 2px inset $blue-bright;}
-.error {outline: 2px solid $dark-red;}
-
 
 .bckgrdpattern {
 	background-image: url('../images/background_pattern.jpg');
@@ -44,7 +37,7 @@
 
 	
 	.lanacontent {
-	    max-width: 70%;
+	    max-width: 900px;
 	    width: 100%;
 	    float: right;
 		@include bp(mobile) {
@@ -52,35 +45,27 @@
 		}
 	}
 		.lanacontent-header {
+			padding-top: 30px;
 			margin-bottom: 34px;
+		    overflow: hidden;
 		}
 			.lanacontent-header-title {
 				//font-family: 'Italianno', cursive;
 				font-family: 'Great Vibes', cursive;
-			    font-weight: 400;
+			    font-weight: $normal;
 			    text-transform: capitalize;
 			    color: $blue-bright;
+			    margin-bottom: 17px;
+		        @include transform(scale(1,1.5));
 			    @include bp(mobile) {
 			    	font-size: 2.23em;
    					text-align: center;
 			    }
 			}
 
-			/*.lanacontent-header-subtitle {
-			    line-height: 1;
-			    -webkit-transform: scale(1, 2);
-			    -moz-transform: scale(1, 2);
-			    -ms-transform: scale(1, 2);
-			    -o-transform: scale(1, 2);
-			    transform: scale(1, 2);
-			    margin: 0;
-			    height: 84px;
-			    overflow: hidden;
-			    margin-bottom: 53px;
-				@extend .allcaps;
-			}*/
-
 			.lanalogo {
+				margin-left: 36px;
+				margin-bottom: 38px;
 				@include bp(mobile) {
     				width: 254px;
 				    margin: 0 auto 15px;
@@ -89,8 +74,9 @@
 
 			.lanacontent-header-text {
 			    display: inline-block;
-		        line-height: 1;
-    			margin: 0;
+			    font-size: 2.27em;
+		        margin-left: 36px;
+		        margin-right: 12px;
 			    vertical-align: top;
 			    @include bp(mobile) {
 				    display: block;
@@ -100,8 +86,8 @@
 			}
 
 			.twodoorlogo {
-    			display: inline-block;
-			    width: 327px;
+			    display: inline-block;
+			    width: 320px;
 			    @include bp(mobile) {
     				display: block;
 			    	width: 137px;
@@ -114,32 +100,31 @@
 	    clear: right;
 		@include bp(mobile) {margin-bottom: 50px;}
 	}
-		.lanaform-header {
-			background-color: rgba(255, 255, 255, 0.6);
-		    text-align: center;
-	        line-height: 1;
-		    padding: 26px 0 37px;
-		    margin-bottom: -16px;
-		    @include bp(mobile) {
-		    	padding: 20px 0 23px;
-		    }
-		}
+		.formcontent {
+		    background-color: rgba(255, 255, 255, 0.6);
+		}	
+			.formheader {
+			    text-align: center;
+		        line-height: 1;
+			    padding: 34px 0 37px;
+			    @include bp(mobile) {
+			    	padding: 20px 0 23px;
+			    }
+			}
 
-		    .lanaform-header-text {
-		        font-size: 1.9375em;
-		    	font-weight: bold;
-	    	    margin: 0;
-	    	    @include bp(mobile) { 
-	    	    	font-size: 1.125em;
-	    	    }
-		    }
+			    .formheader-text {
+			        font-size: 1.9375em;
+			    	font-weight: $bold;
+		    	    margin: 0;
+		    	    @include bp(mobile) { 
+		    	    	font-size: 1.125em;
+		    	    }
+			    }	
 
-		.lanaform-content {}
 			.formfields {
 				list-style: none;
-				background-color: rgba(255, 255, 255, 0.6);
 			    padding: 0 20px;
-			    margin-bottom: 0;
+			    margin: 0;
 		        overflow: hidden;
 			}
 				.formfields-item {
@@ -159,7 +144,7 @@
 
 					.formfields-item-label {
 					    display: block;
-				        font-weight: 700;
+				        font-weight: $bold;
 				        line-height: 1;
 				        margin-bottom: 11px;
 				        @include bp(mobile) {
@@ -178,19 +163,19 @@
 				    	}
 					    &.invalid {
 					    	border: 2px inset red;
-					    	background-color: #fff;
+					    	background-color: $white;
 				    	}
 
 					    input {
 						    width: 100%;
 							background-color: transparent;
-							color: #fff;
+							color: $white;
 						}
 					}
 					.formfields-item-errormsg {
 						display: none;
 						color: $dark-red;
-					    font-weight: bold;
+					    font-weight: $bold;
 					    margin-top: 7px;
 					}
 			
@@ -199,49 +184,58 @@
 				color: $dark-red;
 				text-align: left;
 				text-indent: 4px;
-			    font-weight: 700;
-			    background-color: rgba(255, 255, 255, 0.6);
-		        padding: 0 20px 5px;
+			    font-weight: $bold;
+		        padding: 0 20px 8px;
 	            margin: 0;
 		        @include bp(mobile) {
 		        	font-size: 0.875em;
 		        }
 			}
-			.formsubmit {
-		        min-height: 60px;
-			    max-width: 223px;
-			    margin: 26px auto;
-			    margin-top: 26px;
-			    @include bp(mobile) {
-		    	    min-height: 50px;
-			    }
+
+		.formsubmit {
+	        min-height: 60px;
+		    max-width: 299px;
+		    margin: 26px auto;
+		    @include bp(mobile) {
+	    	    min-height: 50px;
 		    }
-				.button--submit {
-					color: #fff;
-					font-weight: 700;
-					text-decoration: none;
-					@include border-radius(5px);
-					background: $blue-bright;
-					padding: 16px 30px;
-				    @include box-shadow(0px 9px 0px $blue-dark);
-				    border: 0;
-
-				    &:active, &.active {
-					    @include box-shadow(0px 5px 0px $blue-dark);
-					    position:relative;
-					    top:4px;
-					}
-					&:focus {
-						outline: 0;
-					}
-
-				    @include bp(mobile) {
-			    	    padding-top: 10px;
-			    	    padding-bottom: 10px;
-				    }
-
-				    &.disabled {
-		     			opacity: 0.6;
-  						pointer-events: none;
-				    }
+	    }
+			.button {
+				color: $white;
+				font-weight: $bold;
+				text-decoration: none;
+				@include border-radius(5px);
+				padding: 16px 30px;
+			    border: 0;
+			    &:active, &.active {
+				    position:relative;
+				    top:4px;
 				}
+			    @include bp(mobile) {
+		    	    padding-top: 10px;
+		    	    padding-bottom: 10px;
+			    }
+
+			    &.disabled {
+	     			opacity: 0.6;
+						pointer-events: none;
+			    }
+					&--submit {
+				    	@extend .button;
+						background: $blue-bright;
+					    @include box-shadow(0px 9px 0px $blue-dark);
+						margin-right: 15px;
+						&:active, &.active {
+				    		@include box-shadow(0px 5px 0px $blue-dark);
+			    		}
+				    }
+					&--reset {
+				    	@extend .button;
+			    	    background: $dark-pink;
+			    	    @include box-shadow(0px 9px 0px rgb(129, 10, 21));
+					    padding: 11px 25px;
+					    &:active, &.active {
+				    		@include box-shadow(0px 5px 0px rgb(129, 10, 21));
+				    	}
+				    }
+			}

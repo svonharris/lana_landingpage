@@ -2,6 +2,10 @@
 Quirks
    - won't allow one letter to pass as a name(bad?)
    - current name accepts all symbols
+   -$('.js-container').fadeIn(1000, function() {
+      $('.js-bckgrdlana').fadeIn(1000);
+    });
+  - add "disabled" class on submit button by default
 */
 
 $(document).ready(function() {
@@ -105,36 +109,31 @@ $(document).ready(function() {
       switch(n) {
         case "phone":
           var pn = phoneNumber(v);
-          shit(pn,inputs[i],"Must have 10 digits",n,v);    
+          message(pn,inputs[i],"Must have 10 digits",n,v);    
           break;
         
         case "fname":
           var bn = birthName(v);
-          shit(bn,inputs[i],"Alphabetical characters only",n,v); 
+          message(bn,inputs[i],"Alphabetical characters only",n,v); 
           break;
         
         case "lname":
           var bn = birthName(v);
-          shit(bn,inputs[i],"Alphabetical characters only",n,v);
+          message(bn,inputs[i],"Alphabetical characters only",n,v);
           break;
         
         case "email":
           var eaddy = emailAddres(v);
-          shit(eaddy,inputs[i],"Email is incorrect",n,v);
+          message(eaddy,inputs[i],"Email is incorrect",n,v);
           break;
-        
-        case "birthdate":
-          var bday = birthDate(v);
-          shit(bday,inputs[i],"MM/DD/YYYY format",n,v);
-          break; 
 
         default:
-          console.log(v + " is undefined");
+          return false;
           return;
       }
     }
 
-    function shit(patternval,inputnum,text,name,value) {
+    function message(patternval,inputnum,text,name,value) {
       if (patternval === false) {
         correctInputs.push("false");
         errorMsg(inputnum, text);
@@ -155,11 +154,11 @@ $(document).ready(function() {
 
 
     function errorMsg(field, msg) {
-      field.parent().next('.js-errormsg').html(msg).css('display', 'block');
+      field.parent().next('.js-errormsg').html(msg);
       errorClass(field);
     }
     function successMsg(field, msg) {
-      field.parent().next('.js-errormsg').html(msg).css('display', 'none');
+      field.parent().next('.js-errormsg').html(msg);
       correctClass(field);
     }
     function phoneNumber(phone) {
@@ -195,14 +194,6 @@ $(document).ready(function() {
         }
       } else {
         return false;
-      }
-    }
-    function birthDate(bday) {
-      var regex = /^\d{2}\/\d{2}\/\d{4}$/;
-      if (regex.test(bday) === false) {
-        return false;
-      } else {
-        return true;
       }
     }
 

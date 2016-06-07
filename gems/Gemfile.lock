@@ -28,6 +28,8 @@ GEM
       rack-test
       sinatra (~> 1.4.0)
       tilt (>= 1.3, < 3)
+    sinatra-flash (0.3.0)
+      sinatra (>= 1.0.0)
     sinatra-reloader (1.0)
       sinatra-contrib
     slop (3.6.0)
@@ -43,4 +45,5 @@ DEPENDENCIES
   pry
   sinatra
   sinatra-contrib (~> 1.4, >= 1.4.6)
+  sinatra-flash
   sinatra-reloader (~> 1.0)

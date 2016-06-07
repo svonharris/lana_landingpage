@@ -15,7 +15,7 @@
 }
 
 .bckgrdlana {
-	display: none;
+	//display: none;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -23,7 +23,7 @@
 }
 
 .container {
-	display: none;
+	//display: none;
     min-width: 320px;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -173,7 +173,6 @@
 						}
 					}
 					.formfields-item-errormsg {
-						display: none;
 						color: $dark-red;
 					    font-weight: $bold;
 					    margin-top: 7px;
@@ -218,7 +217,7 @@
 
 			    &.disabled {
 	     			opacity: 0.6;
-						pointer-events: none;
+					pointer-events: none;
 			    }
 					&--submit {
 				    	@extend .button;

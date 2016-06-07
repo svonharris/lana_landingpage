@@ -590,7 +590,6 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 /* line 17, sass/style.scss */
 .bckgrdlana {
-  display: none;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -599,7 +598,6 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 /* line 25, sass/style.scss */
 .container {
-  display: none;
   min-width: 320px;
   max-width: 1200px;
   margin: 0 auto;
@@ -806,13 +804,12 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 /* line 175, sass/style.scss */
 .formfields-item-errormsg {
-  display: none;
   color: #a10713;
   font-weight: 700;
   margin-top: 7px;
 }
 
-/* line 182, sass/style.scss */
+/* line 181, sass/style.scss */
 .formfineprint {
   font-size: 1em;
   color: #a10713;
@@ -823,26 +820,26 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 182, sass/style.scss */
+  /* line 181, sass/style.scss */
   .formfineprint {
     font-size: 0.875em;
   }
 }
 
-/* line 195, sass/style.scss */
+/* line 194, sass/style.scss */
 .formsubmit {
   min-height: 60px;
   max-width: 299px;
   margin: 26px auto;
 }
 @media only screen and (max-width: 767px) {
-  /* line 195, sass/style.scss */
+  /* line 194, sass/style.scss */
   .formsubmit {
     min-height: 50px;
   }
 }
 
-/* line 203, sass/style.scss */
+/* line 202, sass/style.scss */
 .button, .button--submit, .button--reset {
   color: #ffffff;
   font-weight: 700;
@@ -855,24 +852,24 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   padding: 16px 30px;
   border: 0;
 }
-/* line 210, sass/style.scss */
+/* line 209, sass/style.scss */
 .button:active, .button--submit:active, .button--reset:active, .button.active, .active.button--submit, .active.button--reset {
   position: relative;
   top: 4px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 203, sass/style.scss */
+  /* line 202, sass/style.scss */
   .button, .button--submit, .button--reset {
     padding-top: 10px;
     padding-bottom: 10px;
   }
 }
-/* line 219, sass/style.scss */
+/* line 218, sass/style.scss */
 .button.disabled, .disabled.button--submit, .disabled.button--reset {
   opacity: 0.6;
   pointer-events: none;
 }
-/* line 223, sass/style.scss */
+/* line 222, sass/style.scss */
 .button--submit {
   background: #0c6cce;
   -webkit-box-shadow: 0px 9px 0px #061c5b;
@@ -880,13 +877,13 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   box-shadow: 0px 9px 0px #061c5b;
   margin-right: 15px;
 }
-/* line 228, sass/style.scss */
+/* line 227, sass/style.scss */
 .button--submit:active, .button--submit.active {
   -webkit-box-shadow: 0px 5px 0px #061c5b;
   -moz-box-shadow: 0px 5px 0px #061c5b;
   box-shadow: 0px 5px 0px #061c5b;
 }
-/* line 232, sass/style.scss */
+/* line 231, sass/style.scss */
 .button--reset {
   background: #ea2738;
   -webkit-box-shadow: 0px 9px 0px #810a15;
@@ -894,7 +891,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   box-shadow: 0px 9px 0px #810a15;
   padding: 11px 25px;
 }
-/* line 237, sass/style.scss */
+/* line 236, sass/style.scss */
 .button--reset:active, .button--reset.active {
   -webkit-box-shadow: 0px 5px 0px #810a15;
   -moz-box-shadow: 0px 5px 0px #810a15;

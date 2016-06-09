@@ -21,12 +21,36 @@ class Customer
 		if @@errors.empty?
 			return true
 		else
-			return @@errors
+			# return @@errors
+			Customer.compare
 		end
 	end
+	
+	# def self.compare
+	# 	@printError = {}
+	# 	for error in @@errors
+	# 		if error === "email"
+	# 	 		#puts "yes email"
+		 		# @printError["email"] = "#{flash[:email]}"
+	#  		elsif error === "phone"
+	#  			#puts "yes phone"
+	#  			@printError["phone"] = "#{flash[:phone]}"
+	# 	 	end
+	# 	 end
+	# 	 return @printError
+	# end
 
-	def show
-		return @@errors
+	def self.compare
+		@collectError = []
+		for error in @@errors
+			if error === "email"
+		 		@collectError << "email"
+	 		elsif error === "phone"
+	 			#puts "yes phone"
+	 			@collectError << "phone"
+		 	end
+		 end
+		 return @collectError
 	end
 
 	def parseForm(form)
@@ -37,17 +61,20 @@ class Customer
 				@lastname = value
 			elsif key === "email"
 				@emailaddress = value
+				Customer.email
 			elsif key === "phone"
 				@phonenumber = value
+				Customer.number
 			else 
 				return false
 			end
+			# binding.pry
 		}
-			binding.pry
 	end
 
-	def number
-		if @phonenumber === "" || @phonenumber === " "
+	def self.number
+		# binding.pry
+		if @phonenumber === "" || @phonenumber === " " || @phonenumber.nil?
 			# return true;
 		else
 			n = @phonenumber
@@ -63,7 +90,7 @@ class Customer
 		end
 	end
 
-	def email
+	def self.email
 		if @emailaddress === "" || @emailaddress === " "
 			@@errors << "email"
 		else
@@ -82,33 +109,33 @@ end
 ################################################ Object {fname: "she", lname: "har", email: "a@a.com", phone: ""}
 
 get '/' do
-	# @firstn = "#{flash[:firstn]}"
-	# @lastn = "#{flash[:lastn]}"
-	# @email = "#{flash[:email]}"
-	# @phone = "#{flash[:phone]}"
+	binding.pry
+	if session[:printError].nil? === false
+		flash[:firstn] = "Alphabetical characters only"
+		flash[:lastn] = "Alphabetical characters only"
+		flash[:email] = "Email address incorrect"
+		flash[:phone] = "Must have 10 digits"
+		session[:printError].each do |index|
+			if index === "email"
+				@email = "#{flash[:email]}"
+			elsif index === "phone"
+				@phone = "#{flash[:phone]}"
+			end
+		end
+	end
 	erb :lanalandingpage
 end
 
 post '/signup' do
 	session[:data] = Customer.new
 	session[:data].parseForm(params)
-	session[:data].number
-	session[:data].email
-	binding.pry
-	errorstatus = session[:data].anyErrors
-	if errorstatus === true
+	# binding.pry
+	collectError = session[:data].anyErrors
+	if collectError === true
 		redirect to('/thankyou')
 	else
-		flash[:firstn] = "Alphabetical characters only"
-		flash[:lastn] = "Alphabetical characters only"
-		flash[:email] = "Email address incorrect"
-		flash[:phone] = "Must have 10 digits"
-		# for i in errorstatus
-		# 	if errorstatus[i] === "email"
-		# 		@email = "#{flash[:email]}"
-		# 	end
-		# end 
-		@email = "#{flash[:email]}"
+		# binding.pry
+		session[:printError] = collectError
 		redirect to('/')
 	end
 end
@@ -119,7 +146,7 @@ post '/signup_js' do
 	session[:data].parseForm(form)
 	session[:data].number
 	session[:data].email
-	binding.pry
+	# binding.pry
 	# redirect to('/thankyou')
 	return "success"
 end

@@ -2,54 +2,59 @@
 Quirks
    - won't allow one letter to pass as a name(bad?)
    - current name accepts all symbols
-   -$('.js-container').fadeIn(1000, function() {
-      $('.js-bckgrdlana').fadeIn(1000);
-    });
-  - add "disabled" class on submit button by default
+  - replace POST url
 */
 
 $(document).ready(function() {
+	gone();
     fade();
     highlight();
+    disable();
+    // $('#signup').attr('action', "/signup_js")
 });
 
-  function fade() { //fade content & backgroud image in slowly
-    $('.js-container').fadeIn(1000, function() {
-      $('.js-bckgrdlana').fadeIn(1000);
-    });
-  }
+	function gone() {
+		$('.js-container').css('display', 'none');
+	    $('.js-bckgrdlana').css('display', 'none');
+	}
 
-  function highlight() { //outlines input field when focus and removes once unfocused(blur)
-    $(':input').focus(function() {
-      var field = $(this);
-      if (field.is(':button')) {
-        field.addClass('focused');
-        field.blur(function() {
-          field.removeClass('focused');
-        });
-      } else {
-        field.parent().addClass('focused');
-        field.blur(function() {
-          field.parent().removeClass('focused');
-          required(field);
-        });
-      }
-    });
-  }
+	function fade() { //fade content & backgroud image in slowly
+		$('.js-container').fadeIn(1000, function() {
+		  $('.js-bckgrdlana').fadeIn(1000);
+		});
+	}
 
-  function required(input) { //varifies if input is required & is not empty
-    if (input.prop('required')) {
-      var n = input.val();
-      if (n === null || n === "") {
-        errorClass(input);
-        disable();
-      } else {
-        correctClass(input);
-      }
-    } else {
-      correctClass(input);
-    }
-  }
+	function highlight() { //outlines input field when focus and removes once unfocused(blur)
+		$(':input').focus(function() {
+			var field = $(this);
+			if (field.is(':button')) {
+		        field.addClass('focused');
+		        field.blur(function() {
+	          		field.removeClass('focused');
+	        	});
+      		} else {
+		        field.parent().addClass('focused');
+		        field.blur(function() {
+          			field.parent().removeClass('focused');
+          			required(field);
+        		});
+      		}
+    	});
+	}
+
+	function required(input) { //varifies if input is required & is not empty
+		if (input.prop('required')) {
+			var n = input.val();
+			if (n === null || n === "") {
+				errorClass(input);
+				disable();
+	      	} else {
+				correctClass(input);
+			}
+	    } else {
+			correctClass(input);
+	    }
+	}
 
   function disable() {
     $('#js-submit').addClass('disabled');
@@ -75,7 +80,7 @@ $(document).ready(function() {
     buttonActive($(this));    
     var signUpForm = verification($('#signup'));
     $.ajax({
-      url: '/signup',
+      url: '/signup_js',
       type: 'POST',
       data: {signup_form: JSON.stringify(signUpForm)}
     }).done(function(msg) {

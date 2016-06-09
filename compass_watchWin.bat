@@ -1,2 +1,2 @@
 echo
-compass watch css/sass/all.scss
+compass watch public/css/sass/all.scss

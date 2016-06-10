@@ -5,6 +5,7 @@
 .bold {font-weight: 700;}
 .focused {outline: 2px inset $blue-bright;}
 .error {outline: 2px solid $dark-red;}
+.block {display: block;}
 
 @mixin border-radius($value) {
   -webkit-border-radius: $value;

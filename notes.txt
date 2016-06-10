@@ -8,6 +8,8 @@
 	.https://github.com/treeder/rack-flash
 - usings rails gems in sinatra or anywhere
 	.http://nicksda.apotomo.de/2012/06/using-rails-gems-like-simple_form-in-sinatra-or-anywhere/
+- mongoDB
+	.http://www.tutorialspoint.com/mongodb/
 
 http://stackoverflow.com/questions/121203/how-to-detect-if-javascript-is-disabled
 http://stackoverflow.com/questions/1877641/how-ajax-aplication-should-behave-when-javascript-is-disabled-common-practice

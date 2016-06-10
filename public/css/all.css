@@ -471,6 +471,11 @@ th {
   outline: 2px solid #a10713;
 }
 
+/* line 8, sass/mixins.scss */
+.block {
+  display: block;
+}
+
 /* line 1, sass/base.scss */
 body {
   font-size: 1em;
@@ -595,6 +600,12 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   bottom: 0;
   width: 54%;
 }
+@media only screen and (max-width: 767px) {
+  /* line 17, sass/style.scss */
+  .bckgrdlana {
+    min-width: 250px;
+  }
+}
 
 /* line 25, sass/style.scss */
 .container {
@@ -612,27 +623,27 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   }
 }
 
-/* line 39, sass/style.scss */
+/* line 38, sass/style.scss */
 .lanacontent {
   max-width: 900px;
   width: 100%;
   float: right;
 }
 @media only screen and (max-width: 767px) {
-  /* line 39, sass/style.scss */
+  /* line 38, sass/style.scss */
   .lanacontent {
     max-width: 100%;
   }
 }
 
-/* line 47, sass/style.scss */
+/* line 46, sass/style.scss */
 .lanacontent-header {
   padding-top: 30px;
   margin-bottom: 34px;
   overflow: hidden;
 }
 
-/* line 52, sass/style.scss */
+/* line 51, sass/style.scss */
 .lanacontent-header-title {
   font-family: 'Great Vibes', cursive;
   font-weight: 400;
@@ -644,27 +655,27 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   transform: scale(1, 1.5);
 }
 @media only screen and (max-width: 767px) {
-  /* line 52, sass/style.scss */
+  /* line 51, sass/style.scss */
   .lanacontent-header-title {
     font-size: 2.23em;
     text-align: center;
   }
 }
 
-/* line 66, sass/style.scss */
+/* line 65, sass/style.scss */
 .lanalogo {
   margin-left: 36px;
   margin-bottom: 38px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 66, sass/style.scss */
+  /* line 65, sass/style.scss */
   .lanalogo {
     width: 254px;
     margin: 0 auto 15px;
   }
 }
 
-/* line 75, sass/style.scss */
+/* line 74, sass/style.scss */
 .lanacontent-header-text {
   display: inline-block;
   font-size: 2.27em;
@@ -673,11 +684,12 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   vertical-align: top;
 }
 @media only screen and (max-width: 767px) {
-  /* line 75, sass/style.scss */
+  /* line 74, sass/style.scss */
   .lanacontent-header-text {
     display: block;
+    font-size: 1.2em;
     text-align: center;
-    margin-bottom: 10px;
+    margin: 0 0 10px;
   }
 }
 
@@ -709,62 +721,73 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 /* line 103, sass/style.scss */
 .formcontent {
   background-color: rgba(255, 255, 255, 0.6);
-}
-
-/* line 106, sass/style.scss */
-.formheader {
-  text-align: center;
-  line-height: 1;
-  padding: 34px 0 37px;
+  padding: 34px 20px 14px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 106, sass/style.scss */
-  .formheader {
-    padding: 20px 0 23px;
+  /* line 103, sass/style.scss */
+  .formcontent {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
-/* line 115, sass/style.scss */
+/* line 112, sass/style.scss */
+.formheader {
+  text-align: center;
+  line-height: 1;
+  padding-bottom: 37px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 112, sass/style.scss */
+  .formheader {
+    padding-bottom: 23px;
+  }
+}
+
+/* line 121, sass/style.scss */
 .formheader-text {
   font-size: 1.9375em;
   font-weight: 700;
   margin: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 115, sass/style.scss */
+  /* line 121, sass/style.scss */
   .formheader-text {
     font-size: 1.125em;
   }
 }
 
-/* line 124, sass/style.scss */
+/* line 130, sass/style.scss */
 .formfields {
   list-style: none;
-  padding: 0 20px;
+  padding-left: 0;
+  padding-bottom: 20px;
   margin: 0;
   overflow: hidden;
 }
 
-/* line 130, sass/style.scss */
+/* line 137, sass/style.scss */
 .formfields-item {
   width: 25%;
   float: left;
   padding-right: 15px;
   margin-bottom: 10px;
 }
-/* line 135, sass/style.scss */
+/* line 142, sass/style.scss */
 .formfields-item:last-child {
   padding-right: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 130, sass/style.scss */
+  /* line 137, sass/style.scss */
   .formfields-item {
     width: 100%;
-    padding-right: 0;
+    padding-right: 2px;
+    padding-left: 2px;
   }
 }
 
-/* line 145, sass/style.scss */
+/* line 153, sass/style.scss */
 .formfields-item-label {
   display: block;
   font-weight: 700;
@@ -772,74 +795,95 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin-bottom: 11px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 145, sass/style.scss */
+  /* line 153, sass/style.scss */
   .formfields-item-label {
     font-size: 0.875em;
   }
 }
 
-/* line 154, sass/style.scss */
+/* line 162, sass/style.scss */
 .formfields-item-input {
   display: block;
   text-align: left;
   background-color: #f28f1b;
   padding: 10px 7px;
 }
-/* line 160, sass/style.scss */
+/* line 168, sass/style.scss */
 .formfields-item-input.focused {
   outline: 2px inset #0c6cce;
   color: #000000;
 }
-/* line 164, sass/style.scss */
+/* line 172, sass/style.scss */
 .formfields-item-input.invalid {
   border: 2px inset red;
   background-color: #ffffff;
 }
-/* line 169, sass/style.scss */
+/* line 177, sass/style.scss */
 .formfields-item-input input {
   width: 100%;
   background-color: transparent;
   color: #ffffff;
 }
 
-/* line 175, sass/style.scss */
+/* line 183, sass/style.scss */
 .formfields-item-errormsg {
   color: #a10713;
   font-weight: 700;
   margin-top: 7px;
 }
+@media only screen and (max-width: 767px) {
+  /* line 183, sass/style.scss */
+  .formfields-item-errormsg {
+    text-align: center;
+  }
+}
 
-/* line 181, sass/style.scss */
+/* line 190, sass/style.scss */
 .formfineprint {
   font-size: 1em;
   color: #a10713;
   text-align: left;
   text-indent: 4px;
   font-weight: 700;
-  padding: 0 20px 8px;
+  padding-left: 20px;
   margin: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 181, sass/style.scss */
+  /* line 190, sass/style.scss */
   .formfineprint {
     font-size: 0.875em;
+    padding-left: 0;
   }
 }
 
-/* line 194, sass/style.scss */
+/* line 203, sass/style.scss */
+.postsuccess {
+  font-size: 1.9375em;
+  text-align: center;
+  line-height: 1;
+  margin: 0 0 20px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 203, sass/style.scss */
+  .postsuccess {
+    margin-bottom: 6px;
+  }
+}
+
+/* line 213, sass/style.scss */
 .formsubmit {
   min-height: 60px;
   max-width: 299px;
   margin: 26px auto;
 }
 @media only screen and (max-width: 767px) {
-  /* line 194, sass/style.scss */
+  /* line 213, sass/style.scss */
   .formsubmit {
     min-height: 50px;
   }
 }
 
-/* line 202, sass/style.scss */
+/* line 221, sass/style.scss */
 .button, .button--submit, .button--reset {
   color: #ffffff;
   font-weight: 700;
@@ -849,41 +893,41 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  padding: 16px 30px;
   border: 0;
 }
-/* line 209, sass/style.scss */
+/* line 227, sass/style.scss */
 .button:active, .button--submit:active, .button--reset:active, .button.active, .active.button--submit, .active.button--reset {
   position: relative;
   top: 4px;
 }
-@media only screen and (max-width: 767px) {
-  /* line 202, sass/style.scss */
-  .button, .button--submit, .button--reset {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-}
-/* line 218, sass/style.scss */
+/* line 232, sass/style.scss */
 .button.disabled, .disabled.button--submit, .disabled.button--reset {
   opacity: 0.6;
   pointer-events: none;
 }
-/* line 222, sass/style.scss */
+/* line 236, sass/style.scss */
 .button--submit {
   background: #0c6cce;
   -webkit-box-shadow: 0px 9px 0px #061c5b;
   -moz-box-shadow: 0px 9px 0px #061c5b;
   box-shadow: 0px 9px 0px #061c5b;
+  padding: 16px 30px;
   margin-right: 15px;
 }
-/* line 227, sass/style.scss */
+/* line 242, sass/style.scss */
 .button--submit:active, .button--submit.active {
   -webkit-box-shadow: 0px 5px 0px #061c5b;
   -moz-box-shadow: 0px 5px 0px #061c5b;
   box-shadow: 0px 5px 0px #061c5b;
 }
-/* line 231, sass/style.scss */
+@media only screen and (max-width: 767px) {
+  /* line 236, sass/style.scss */
+  .button--submit {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+/* line 250, sass/style.scss */
 .button--reset {
   background: #ea2738;
   -webkit-box-shadow: 0px 9px 0px #810a15;
@@ -891,7 +935,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   box-shadow: 0px 9px 0px #810a15;
   padding: 11px 25px;
 }
-/* line 236, sass/style.scss */
+/* line 255, sass/style.scss */
 .button--reset:active, .button--reset.active {
   -webkit-box-shadow: 0px 5px 0px #810a15;
   -moz-box-shadow: 0px 5px 0px #810a15;

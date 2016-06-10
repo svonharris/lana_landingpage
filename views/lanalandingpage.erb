@@ -8,10 +8,10 @@
 <body>
 
 <div class="bckgrdpattern"></div>
-<div class="js-bckgrdlana bckgrdlana">
+<div id="js-bckgrdlana" class="bckgrdlana">
 	<img src="../images/lana.png">
 </div>
-<div class="js-container container">
+<div id="js-container" class="container <%=@style%>">
 	<div class="lanacontent">
 		<header class="lanacontent-header">
 			<h1 class="lanacontent-header-title">the honeymoon tour</h1>
@@ -22,7 +22,7 @@
 	</div>
 	<div class="lanaform">
 		<form action="/signup" method="post" id="signup" name="signup_form" novalidate>
-			<div class="formcontent">
+			<div id="js-formcontent" class="formcontent">
 				<div class="formheader">
 					<p class="formheader-text">Sign up to get early access to pre-sale tickets.</p>
 				</div>
@@ -73,7 +73,7 @@
 		</form>
 	</div>
 	<div class="lanasite">
-		<a href="http://lanadelrey.com/gallery/" class="lanasite-link">Continue to site &rarr;</a>
+		<a href="http://lanadelrey.com/gallery/" class="lanasite-link">Continue to the site &rarr;</a>
 	</div>
 </div>
 

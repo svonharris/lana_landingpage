@@ -1,10 +1,3 @@
-/*
-Quirks
-   - won't allow one letter to pass as a name(bad?)
-   - current name accepts all symbols
-  - replace POST url
-*/
-
 $(document).ready(function() {
 	// gone();
 	fade();
@@ -84,20 +77,20 @@ $(document).ready(function() {
 			data: {signup_form: JSON.stringify(signUpForm)}
 		}).done(function(msg) {
 		  	// $('body').html(msg);
-		  	console.log("this is the message: " + msg);
+		  	console.log(msg);
 			if (msg === "success") {
-				$('#js-formcontent').html('<p class="postsuccess">Thank-You! <br> <a href="http://lanadelrey.com/gallery/" class="lanasite-link">Continue to the site &rarr;</a></p>');
+				$('#js-formcontent').html('<p class="postsuccess">Thank-You!');
 			};
 	  	});
   	});
 
 
-	function buttonActive(btn) {
-		btn.addClass('active');
-		btn.blur(function() {
-			btn.removeClass('active');
-		});
-	}
+  function buttonActive(btn) {
+	btn.addClass('active');
+	btn.blur(function() {
+		btn.removeClass('active');
+	});
+  }
 
 
 
@@ -188,19 +181,13 @@ $(document).ready(function() {
 	  }
 	}
 	function birthName(name) {
-	  // var regex = /^([a-zA-Z]+\w[\w\-\ ]+[a-zA-Z]$){0,}/;
-	  // var regex = /((^[a-zA-Z])+[\w\-\ ]+([a-zA-Z]$)){0,}/;
-	  var regex = /(^([a-zA-Z]*))+\w[\w\-\ ]/;
-	  if (regex.test(name)) {
-		var regex = /[0-9]/;
+
+		var regex = /[\d\W]/;
 		if (regex.test(name)) {
-		  return false;
+			return false;
 		} else {
-		  return true;
+			return true;
 		}
-	  } else {
-		return false;
-	  }
 	}
 
 

@@ -15,10 +15,12 @@ p {
     margin: 2px 0;
 }
 h1 {
-	//font-size: 9.375em; //150px
-	font-size: 6.375em; //102px
+	font-size: 6.938em; //111px
 	line-height: 1;
 	margin: .1em 0;
+	@include bp(small-desktop) {font-size: 5.812em;}
+	@include bp(tablet) {font-size: 4em;}
+    @include bp(mobile) {font-size: 2.23em;}
 }
 h2 {
 	font-size: 5.062em; //81px

@@ -13,15 +13,18 @@ enable :sessions
 ################################################
 
 class Customer
-	# attr_accessor :phonenumber, :firstname, :lastname, :emailaddress
+	attr_accessor :phonenumber, :firstname, :lastname, :emailaddress, :errors
 	
-	@@errors = []
+
+	def initialize
+		@errors = []
+	end
 
 	def anyErrors
-		if @@errors.empty?
+		if @errors.empty?
 			return true
 		else
-			return @@errors
+			return @errors
 		end
 	end
 
@@ -29,48 +32,55 @@ class Customer
 		form.each { |key, value| 
 			if key === "fname"
 				@firstname = value
+				binding.pry
 			elsif key === "lname"
 				@lastname = value
 			elsif key === "email"
 				@emailaddress = value
-				Customer.email(value)
 			elsif key === "phone"
 				@phonenumber = value
-				binding.pry
-				Customer.number(value)
-			else 
-				return false
 			end
 		}
 	end
 
-	def self.number(phonenumber)
-		binding.pry
-		if phonenumber === "" || phonenumber === " "
-			# return true;
+	def birthname(birthname)
+		# binding.pry
+		if birthname === "" || birthname === " "
+			return false
 		else
-			n = phonenumber
-			if n.length === 10
-				if /\D/ === n
-					@@errors << "phone"
-				else
-					# puts "true"
-				end
+			fn = birthname
+			if /\d/.match(fn) || /\W/.match(fn) # is a digit or is not a-z/0-9
+				return false
 			else
-				@@errors << "phone"
+				# add to database
 			end
 		end
 	end
 
-	def self.email(emailaddress)
-		if emailaddress === "" || emailaddress === " "
-			@@errors << "email"
-		else
-			e = emailaddress
-			if /^[\w\.\-\_\+]+@[\w-]+\.\w{2,4}$/ === e
-				# return true
+	def number
+		if @phonenumber != "" || @phonenumber != " "
+			n = @phonenumber
+			if n.length === 10
+				if /\D/.match(n)
+					@errors << "phone"
+				else
+					# add to database
+				end
 			else
-				@@errors << "email"
+				@errors << "phone"
+			end
+		end
+	end
+
+	def email
+		if @emailaddress === "" || @emailaddress === " "
+			@errors << "email"
+		else
+			e = @emailaddress
+			if /^[\w\.\-\_\+]+@[\w-]+\.\w{2,4}$/.match(e)
+				# add to database
+			else
+				@errors << "email"
 			end
 		end
 		# binding.pry
@@ -108,9 +118,23 @@ end
 post '/signup' do
 	session[:data] = Customer.new
 	session[:data].parseForm(params)
+	
+	if session[:data].birthname(session[:data].firstname) === false 
+		session[:data].errors.push("fname")
+	else
+		# add to database
+	end
+	if session[:data].birthname(session[:data].lastname) === false 
+		session[:data].errors.push("fname")
+	else
+		# add to database
+	end
+	session[:data].email
+	session[:data].number
 
 	collectError = session[:data].anyErrors
 	if collectError === true
+		# add info to database here?
 		redirect to('/thankyou')
 	else
 		session[:printError] = collectError
@@ -119,13 +143,23 @@ post '/signup' do
 end
 
 
-
-
-
 post '/signup_js' do
 	session[:data] = Customer.new
 	form = JSON.parse(params[:signup_form])
 	session[:data].parseForm(form)
+	
+	if session[:data].birthname(session[:data].firstname) === false 
+		session[:data].errors.push("fname")
+	else
+		# add to database
+	end
+	if session[:data].birthname(session[:data].lastname) === false 
+		session[:data].errors.push("fname")
+	else
+		# add to database
+	end
+	session[:data].email
+	session[:data].number
 	
 	collectError = session[:data].anyErrors
 	if collectError === true

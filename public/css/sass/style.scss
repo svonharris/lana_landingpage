@@ -15,33 +15,47 @@
 }
 
 .bckgrdlana {
+    width: 846px;
     position: fixed;
-    left: 0;
+    left: -101px;
     bottom: 0;
-    width: 54%;
-    @include bp(mobile) {min-width: 250px;}
+    @include bp(small-desktop) {
+        width: 635px;
+    	left: -75px;
+    }
+    @include bp(tablet) {
+		width: 537px
+    }
+    @include bp(mobile) {
+    	width: 250px;
+    	left: 0;
+	}
 }
 
 .container {
     min-width: 320px;
 	max-width: 1200px;
+    padding: 0 20px;
 	margin: 0 auto;
     position: relative;
     @include bp(mobile) {
-        padding-top: 15px;
-	    padding-left: 15px;
-	    padding-right: 15px;
+        padding: 15px;
     }
 }
 
 	
 	.lanacontent {
-	    max-width: 900px;
-	    width: 100%;
+	    width: 900px;
 	    float: right;
-		@include bp(mobile) {
-			max-width: 100%;
+	    @include bp(small-desktop) {
+	    	width: 760px;
+	    }
+		@include bp(tablet) {
+			width: 520px;
 		}
+		@include bp(mobile) {
+				width: 100%;
+	    }
 	}
 		.lanacontent-header {
 			padding-top: 30px;
@@ -54,17 +68,22 @@
 			    font-weight: $normal;
 			    text-transform: capitalize;
 			    color: $blue-bright;
-			    margin-bottom: 17px;
+			    margin-bottom: 19px;
 		        @include transform(scale(1,1.5));
 			    @include bp(mobile) {
-			    	font-size: 2.23em;
    					text-align: center;
 			    }
 			}
 
 			.lanalogo {
+			    width: 600px;
 				margin-left: 36px;
 				margin-bottom: 38px;
+				@include bp(tablet) {
+				    width: 407px;
+    				margin-left: 0;
+				    margin-bottom: 19px;
+				}
 				@include bp(mobile) {
     				width: 254px;
 				    margin: 0 auto 15px;
@@ -77,6 +96,13 @@
 		        margin-left: 36px;
 		        margin-right: 12px;
 			    vertical-align: top;
+			    @include bp(small-desktop) {
+		    	    font-size: 1.75em;
+			    }
+			    @include bp(tablet) {
+			    	font-size: 1.4em;
+			    	margin-left: 0;
+			    }
 			    @include bp(mobile) {
 				    display: block;
 			        font-size: 1.2em;
@@ -88,9 +114,14 @@
 			.twodoorlogo {
 			    display: inline-block;
 			    width: 320px;
+			    @include bp(small-desktop) {
+			        width: 300px;
+			    }
+			    @include bp(small-desktop-max) {
+			    	width: 175px;
+			    }
 			    @include bp(mobile) {
     				display: block;
-			    	width: 137px;
     				margin: 0 auto;
 			    }
 			}
@@ -164,7 +195,8 @@
 	    				text-align: left;
 						background-color: $orange;
 					    padding: 10px 7px;
-
+					    margin-left: 2px;
+    					margin-right: 2px;
 					    &.focused {
 					    	outline: 2px inset $blue-bright;
 					    	color: $black;
@@ -172,6 +204,10 @@
 					    &.invalid {
 					    	border: 2px inset red;
 					    	background-color: $white;
+				    	}
+				    	@include bp(mobile) {
+				    	    margin-left: 0;
+	    					margin-right: 0;
 				    	}
 
 					    input {
@@ -257,3 +293,20 @@
 				    	}
 				    }
 			}
+
+	.lanasite {
+		text-align: center;
+		
+		a {
+		    text-decoration: none;
+		    border-bottom: 1px solid #333;
+		    padding-bottom: 3px;
+		    color: #333;
+		    font-size: 15px;
+		    &:hover {
+		    	color: $white;
+			    border-bottom: 1px solid #fff;
+			    text-shadow: 0px 0px 1px #333;
+		    }
+		}
+	}

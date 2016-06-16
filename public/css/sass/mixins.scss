@@ -12,7 +12,7 @@
   -moz-border-radius: $value; 
   -ms-border-radius: $value;
   -o-border-radius: $value;
-  border-radius: $value;
+  border-radius: $value; 
 }
 @mixin box-shadow($value) {
   -webkit-box-shadow: $value;

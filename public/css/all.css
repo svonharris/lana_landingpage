@@ -502,67 +502,85 @@ p {
 
 /* line 17, sass/base.scss */
 h1 {
-  font-size: 6.375em;
+  font-size: 6.938em;
   line-height: 1;
   margin: .1em 0;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* line 17, sass/base.scss */
+  h1 {
+    font-size: 5.812em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 17, sass/base.scss */
+  h1 {
+    font-size: 4em;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 17, sass/base.scss */
+  h1 {
+    font-size: 2.23em;
+  }
+}
 
-/* line 23, sass/base.scss */
+/* line 25, sass/base.scss */
 h2 {
   font-size: 5.062em;
   line-height: 1;
   margin: .1em 0;
 }
 
-/* line 28, sass/base.scss */
+/* line 30, sass/base.scss */
 h3 {
   font-size: 1.625em;
   line-height: 1;
   margin: .1em 0;
 }
 
-/* line 33, sass/base.scss */
+/* line 35, sass/base.scss */
 img {
   max-width: 100%;
   border: none;
   vertical-align: middle;
 }
 
-/* line 38, sass/base.scss */
+/* line 40, sass/base.scss */
 ::-webkit-input-placeholder {
   color: #ffffff;
   opacity: .7;
 }
 
-/* line 43, sass/base.scss */
+/* line 45, sass/base.scss */
 :-moz-placeholder {
   color: #ffffff;
   opacity: .7;
 }
 
-/* line 48, sass/base.scss */
+/* line 50, sass/base.scss */
 ::-moz-placeholder {
   color: #ffffff;
   opacity: .7;
 }
 
-/* line 53, sass/base.scss */
+/* line 55, sass/base.scss */
 :-ms-input-placeholder {
   color: #ffffff;
   opacity: .7;
 }
 
-/* line 57, sass/base.scss */
+/* line 59, sass/base.scss */
 input {
   border: 0;
 }
-/* line 59, sass/base.scss */
+/* line 61, sass/base.scss */
 input:focus {
   border: 0;
   outline: 0;
 }
 
-/* line 64, sass/base.scss */
+/* line 66, sass/base.scss */
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #f28f1b inset;
   -moz-box-shadow: 0 0 0px 1000px #f28f1b inset;
@@ -595,87 +613,119 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 /* line 17, sass/style.scss */
 .bckgrdlana {
+  width: 846px;
   position: fixed;
-  left: 0;
+  left: -101px;
   bottom: 0;
-  width: 54%;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* line 17, sass/style.scss */
+  .bckgrdlana {
+    width: 635px;
+    left: -75px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 17, sass/style.scss */
+  .bckgrdlana {
+    width: 537px;
+  }
 }
 @media only screen and (max-width: 767px) {
   /* line 17, sass/style.scss */
   .bckgrdlana {
-    min-width: 250px;
+    width: 250px;
+    left: 0;
   }
 }
 
-/* line 25, sass/style.scss */
+/* line 35, sass/style.scss */
 .container {
   min-width: 320px;
   max-width: 1200px;
+  padding: 0 20px;
   margin: 0 auto;
   position: relative;
 }
 @media only screen and (max-width: 767px) {
-  /* line 25, sass/style.scss */
+  /* line 35, sass/style.scss */
   .container {
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px;
   }
 }
 
-/* line 38, sass/style.scss */
+/* line 47, sass/style.scss */
 .lanacontent {
-  max-width: 900px;
-  width: 100%;
+  width: 900px;
   float: right;
 }
-@media only screen and (max-width: 767px) {
-  /* line 38, sass/style.scss */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* line 47, sass/style.scss */
   .lanacontent {
-    max-width: 100%;
+    width: 760px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 47, sass/style.scss */
+  .lanacontent {
+    width: 520px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 47, sass/style.scss */
+  .lanacontent {
+    width: 100%;
   }
 }
 
-/* line 46, sass/style.scss */
+/* line 60, sass/style.scss */
 .lanacontent-header {
   padding-top: 30px;
   margin-bottom: 34px;
   overflow: hidden;
 }
 
-/* line 51, sass/style.scss */
+/* line 65, sass/style.scss */
 .lanacontent-header-title {
   font-family: 'Great Vibes', cursive;
   font-weight: 400;
   text-transform: capitalize;
   color: #0c6cce;
-  margin-bottom: 17px;
+  margin-bottom: 19px;
   -webkit-transform: scale(1, 1.5);
   -moz-transform: scale(1, 1.5);
   transform: scale(1, 1.5);
 }
 @media only screen and (max-width: 767px) {
-  /* line 51, sass/style.scss */
+  /* line 65, sass/style.scss */
   .lanacontent-header-title {
-    font-size: 2.23em;
     text-align: center;
   }
 }
 
-/* line 65, sass/style.scss */
+/* line 78, sass/style.scss */
 .lanalogo {
+  width: 600px;
   margin-left: 36px;
   margin-bottom: 38px;
 }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 78, sass/style.scss */
+  .lanalogo {
+    width: 407px;
+    margin-left: 0;
+    margin-bottom: 19px;
+  }
+}
 @media only screen and (max-width: 767px) {
-  /* line 65, sass/style.scss */
+  /* line 78, sass/style.scss */
   .lanalogo {
     width: 254px;
     margin: 0 auto 15px;
   }
 }
 
-/* line 74, sass/style.scss */
+/* line 93, sass/style.scss */
 .lanacontent-header-text {
   display: inline-block;
   font-size: 2.27em;
@@ -683,8 +733,21 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin-right: 12px;
   vertical-align: top;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* line 93, sass/style.scss */
+  .lanacontent-header-text {
+    font-size: 1.75em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 93, sass/style.scss */
+  .lanacontent-header-text {
+    font-size: 1.4em;
+    margin-left: 0;
+  }
+}
 @media only screen and (max-width: 767px) {
-  /* line 74, sass/style.scss */
+  /* line 93, sass/style.scss */
   .lanacontent-header-text {
     display: block;
     font-size: 1.2em;
@@ -693,38 +756,49 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   }
 }
 
-/* line 88, sass/style.scss */
+/* line 114, sass/style.scss */
 .twodoorlogo {
   display: inline-block;
   width: 320px;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* line 114, sass/style.scss */
+  .twodoorlogo {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  /* line 114, sass/style.scss */
+  .twodoorlogo {
+    width: 175px;
+  }
+}
 @media only screen and (max-width: 767px) {
-  /* line 88, sass/style.scss */
+  /* line 114, sass/style.scss */
   .twodoorlogo {
     display: block;
-    width: 137px;
     margin: 0 auto;
   }
 }
 
-/* line 99, sass/style.scss */
+/* line 130, sass/style.scss */
 .lanaform {
   clear: right;
 }
 @media only screen and (max-width: 767px) {
-  /* line 99, sass/style.scss */
+  /* line 130, sass/style.scss */
   .lanaform {
     margin-bottom: 50px;
   }
 }
 
-/* line 103, sass/style.scss */
+/* line 134, sass/style.scss */
 .formcontent {
   background-color: rgba(255, 255, 255, 0.6);
   padding: 34px 20px 14px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 103, sass/style.scss */
+  /* line 134, sass/style.scss */
   .formcontent {
     padding-top: 20px;
     padding-left: 15px;
@@ -732,33 +806,33 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   }
 }
 
-/* line 112, sass/style.scss */
+/* line 143, sass/style.scss */
 .formheader {
   text-align: center;
   line-height: 1;
   padding-bottom: 37px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 112, sass/style.scss */
+  /* line 143, sass/style.scss */
   .formheader {
     padding-bottom: 23px;
   }
 }
 
-/* line 121, sass/style.scss */
+/* line 152, sass/style.scss */
 .formheader-text {
   font-size: 1.9375em;
   font-weight: 700;
   margin: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 121, sass/style.scss */
+  /* line 152, sass/style.scss */
   .formheader-text {
     font-size: 1.125em;
   }
 }
 
-/* line 130, sass/style.scss */
+/* line 161, sass/style.scss */
 .formfields {
   list-style: none;
   padding-left: 0;
@@ -767,19 +841,19 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   overflow: hidden;
 }
 
-/* line 137, sass/style.scss */
+/* line 168, sass/style.scss */
 .formfields-item {
   width: 25%;
   float: left;
   padding-right: 15px;
   margin-bottom: 10px;
 }
-/* line 142, sass/style.scss */
+/* line 173, sass/style.scss */
 .formfields-item:last-child {
   padding-right: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 137, sass/style.scss */
+  /* line 168, sass/style.scss */
   .formfields-item {
     width: 100%;
     padding-right: 2px;
@@ -787,7 +861,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   }
 }
 
-/* line 153, sass/style.scss */
+/* line 184, sass/style.scss */
 .formfields-item-label {
   display: block;
   font-weight: 700;
@@ -795,50 +869,59 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin-bottom: 11px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 153, sass/style.scss */
+  /* line 184, sass/style.scss */
   .formfields-item-label {
     font-size: 0.875em;
   }
 }
 
-/* line 162, sass/style.scss */
+/* line 193, sass/style.scss */
 .formfields-item-input {
   display: block;
   text-align: left;
   background-color: #f28f1b;
   padding: 10px 7px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
-/* line 168, sass/style.scss */
+/* line 200, sass/style.scss */
 .formfields-item-input.focused {
   outline: 2px inset #0c6cce;
   color: #000000;
 }
-/* line 172, sass/style.scss */
+/* line 204, sass/style.scss */
 .formfields-item-input.invalid {
   border: 2px inset red;
   background-color: #ffffff;
 }
-/* line 177, sass/style.scss */
+@media only screen and (max-width: 767px) {
+  /* line 193, sass/style.scss */
+  .formfields-item-input {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 213, sass/style.scss */
 .formfields-item-input input {
   width: 100%;
   background-color: transparent;
   color: #ffffff;
 }
 
-/* line 183, sass/style.scss */
+/* line 219, sass/style.scss */
 .formfields-item-errormsg {
   color: #a10713;
   font-weight: 700;
   margin-top: 7px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 183, sass/style.scss */
+  /* line 219, sass/style.scss */
   .formfields-item-errormsg {
     text-align: center;
   }
 }
 
-/* line 190, sass/style.scss */
+/* line 226, sass/style.scss */
 .formfineprint {
   font-size: 1em;
   color: #a10713;
@@ -849,14 +932,14 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 190, sass/style.scss */
+  /* line 226, sass/style.scss */
   .formfineprint {
     font-size: 0.875em;
     padding-left: 0;
   }
 }
 
-/* line 203, sass/style.scss */
+/* line 239, sass/style.scss */
 .postsuccess {
   font-size: 1.9375em;
   text-align: center;
@@ -864,26 +947,26 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin: 0 0 20px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 203, sass/style.scss */
+  /* line 239, sass/style.scss */
   .postsuccess {
     margin-bottom: 6px;
   }
 }
 
-/* line 213, sass/style.scss */
+/* line 249, sass/style.scss */
 .formsubmit {
   min-height: 60px;
   max-width: 299px;
   margin: 26px auto;
 }
 @media only screen and (max-width: 767px) {
-  /* line 213, sass/style.scss */
+  /* line 249, sass/style.scss */
   .formsubmit {
     min-height: 50px;
   }
 }
 
-/* line 221, sass/style.scss */
+/* line 257, sass/style.scss */
 .button, .button--submit, .button--reset {
   color: #ffffff;
   font-weight: 700;
@@ -895,17 +978,17 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   border-radius: 5px;
   border: 0;
 }
-/* line 227, sass/style.scss */
+/* line 263, sass/style.scss */
 .button:active, .button--submit:active, .button--reset:active, .button.active, .active.button--submit, .active.button--reset {
   position: relative;
   top: 4px;
 }
-/* line 232, sass/style.scss */
+/* line 268, sass/style.scss */
 .button.disabled, .disabled.button--submit, .disabled.button--reset {
   opacity: 0.6;
   pointer-events: none;
 }
-/* line 236, sass/style.scss */
+/* line 272, sass/style.scss */
 .button--submit {
   background: #0c6cce;
   -webkit-box-shadow: 0px 9px 0px #061c5b;
@@ -914,20 +997,20 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   padding: 16px 30px;
   margin-right: 15px;
 }
-/* line 242, sass/style.scss */
+/* line 278, sass/style.scss */
 .button--submit:active, .button--submit.active {
   -webkit-box-shadow: 0px 5px 0px #061c5b;
   -moz-box-shadow: 0px 5px 0px #061c5b;
   box-shadow: 0px 5px 0px #061c5b;
 }
 @media only screen and (max-width: 767px) {
-  /* line 236, sass/style.scss */
+  /* line 272, sass/style.scss */
   .button--submit {
     padding-left: 25px;
     padding-right: 25px;
   }
 }
-/* line 250, sass/style.scss */
+/* line 286, sass/style.scss */
 .button--reset {
   background: #ea2738;
   -webkit-box-shadow: 0px 9px 0px #810a15;
@@ -935,9 +1018,28 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   box-shadow: 0px 9px 0px #810a15;
   padding: 11px 25px;
 }
-/* line 255, sass/style.scss */
+/* line 291, sass/style.scss */
 .button--reset:active, .button--reset.active {
   -webkit-box-shadow: 0px 5px 0px #810a15;
   -moz-box-shadow: 0px 5px 0px #810a15;
   box-shadow: 0px 5px 0px #810a15;
+}
+
+/* line 297, sass/style.scss */
+.lanasite {
+  text-align: center;
+}
+/* line 300, sass/style.scss */
+.lanasite a {
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  padding-bottom: 3px;
+  color: #333;
+  font-size: 15px;
+}
+/* line 306, sass/style.scss */
+.lanasite a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #fff;
+  text-shadow: 0px 0px 1px #333;
 }

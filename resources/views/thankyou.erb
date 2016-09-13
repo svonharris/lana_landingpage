@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Honeymoon Tour</title>
+<meta id="meta" name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="../css/all.css">
+</head>
+<body>
+
+<div class="bckgrdpattern"></div>
+<div id="js-bckgrdlana" class="bckgrdlana">
+	<img src="../images/lana.png">
+</div>
+<div id="js-container" class="container <%=@style%>">
+	<div class="lanacontent">
+		<header class="lanacontent-header">
+			<h1 class="lanacontent-header-title">the honeymoon tour</h1>
+			<div class="js-logo lanalogo"><img src="../images/lana_logo.png" alt=""></div>
+			<p class="lanacontent-header-text"><span class="brightblue bold">October 2016</span> with special guest</p>
+			<div class="twodoorlogo"><img src="../images/twodoorcinema_logo-blue.png" alt="Two Door Cinema Club band logo"></div>
+		</header>
+	</div>
+	<div class="lanaform">
+		<form action="/signup" method="post" id="signup" name="signup_form" novalidate>
+			<div id="js-formcontent" class="formcontent">
+				<p class="postsuccess">Thank-You!</p>
+			</div>
+			<div class="formsubmit">
+				<button type="submit" id="js-submit" class="button--submit">Join Mailing List</button>
+				<button type="reset" class="button--reset">Reset</button>
+			</div>
+		</form>
+	</div>
+	<div class="lanasite">
+		<a href="http://lanadelrey.com/gallery/" class="lanasite-link">Continue to the site &rarr;</a>
+	</div>
+</div>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript" src="../scripts/function.js"></script>
+</body>
+</html>

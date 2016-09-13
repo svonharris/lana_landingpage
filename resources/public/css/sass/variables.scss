@@ -1,0 +1,34 @@
+// Common Breakpoints
+
+$mobile-portrait-breakpoint: 320px !default;
+$mobile-landscape-breakpoint: 480px !default;
+$small-tablet-breakpoint: 568px !default;
+$tablet-breakpoint: 768px !default;
+$small-desktop-breakpoint: 1024px !default;
+$medium-desktop-breakpoint: 1280px !default;
+$large-desktop-breakpoint: 1366px !default;
+$widescreen-desktop-breakpoint: 1920px !default;
+$zoom-breakpoint: 2000px !default;
+
+
+// Colors
+
+$dark-red: #a10713;
+//$honeymoon-blue: #022A5B;
+//$blue: #0B5CBF;
+$white: #ffffff;
+$black: #000000;
+$blue-bright: #0c6cce;
+$blue-dark: #061c5b;
+$tan: #f2e6d6;
+$orange: #f28f1b;
+$dark-pink: #ea2738;
+$melon: #f1845f;
+
+
+// Fonts
+
+$font-family: UpperEastSide-webfont;
+$placeholder-text: #ffffff;
+$normal: 400;
+$bold: 700;

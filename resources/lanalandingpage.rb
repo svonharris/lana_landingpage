@@ -4,7 +4,6 @@ require "sinatra/reloader" if development?
 require "logger"
 require "ap"
 require "json"
-require "logger"
 require 'sinatra/flash'
 require 'mongo'
 require 'json/ext'

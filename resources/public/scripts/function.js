@@ -1,9 +1,7 @@
 $(document).ready(function() {
-	// gone();
 	fade();
 	highlight();
 	disable();
-	// $('#signup').attr('action', "/signup_js")
 });
 
 	function gone() {
@@ -77,7 +75,6 @@ $(document).ready(function() {
 			dataType: 'json',
 			data: {form: signUpForm}
 		}).done(function(msg){
-			console.log(msg)
         	if (msg.status === 200) {
 				$('#js-formcontent').html('<p class="postsuccess">Thank-You!</p>');
 			};        	

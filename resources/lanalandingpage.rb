@@ -160,6 +160,7 @@ end
 
 post '/signup_js', :provides => :json do
 	session[:data] = Customer.new
+	binding.pry
 	session[:data].parseForm(params[:form])
 
 	collection = client[:lana_contacts]
